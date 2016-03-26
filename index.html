@@ -1,15 +1,37 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-<meta charset="UTF-8">
-<title>Wm8808.GitHub.com by wm8808</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>王盟个人作品展示</title>
+<link href="css/base.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" />
+<script>
+	window.onload = function (){
+		var oPageBg = document.getElementById('pageBg');
+		var oImg = oPageBg.children[0];
+		var oFlyL = document.getElementById('flyL');
+		var oName = document.getElementById('name');
+		var X = document.documentElement.clientWidth;
+		var Y = document.documentElement.clientHeight;
+		oName.style.transform = "translateY(0)";
+	};
+</script>
 </head>
 <body>
-aaaaaa
+	<div class="pageF">
+    	<div class="pageBg" id="pageBg">
+        	<img src="img/page1bg.jpg" alt="" />
+            <!-- <div class="flyL" id="flyL">
+                <img src="img/fly.png" alt="" />
+            </div>-->
+            <div class="name" id="name">
+                <p class="nameCon">姓名:王盟盟</p>
+                <p class="nameWeb">web前端工程师</p>
+            </div>
+        </div>
+       
+	</div>
 </body>
 </html>

@@ -1,0 +1,19 @@
+.pageF .pageBg{ position:absolute; left:0; top:0; z-index:-1; width:100%; height:100%;}
+.pageBg img{ width:100%; height:100%; position::fixed; left:0; top:0;}
+.pageF .flyL{ position:absolute; left:0; bottom:21px; transition:1s all ease; transform:translate(0,0);}
+/*.pageF .flyL:active{ transform:translate(200%,-200%);}*/
+.pageF .name{ width:434px; height:226px; position:fixed; left:50%; top:50%; margin-left:-217px; margin-top:-113px; transition:1s all ease; transform:translateY(-500px);}
+.name .nameCon{ font-size:58px; color:#f7e11c;}
+.name .nameWeb{ font-size:60px; color:#e7881e; margin-top:108px;}
+
+
+
+
+
+
+
+
+
+
+
+
