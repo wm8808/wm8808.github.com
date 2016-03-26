@@ -7,31 +7,48 @@
 <title>王盟个人作品展示</title>
 <link href="css/base.css" rel="stylesheet" />
 <link href="css/index.css" rel="stylesheet" />
+<script src="js/move.js"></script>
+<script src="js/index.js"></script>
 <script>
-	window.onload = function (){
-		var oPageBg = document.getElementById('pageBg');
-		var oImg = oPageBg.children[0];
-		var oFlyL = document.getElementById('flyL');
-		var oName = document.getElementById('name');
-		var X = document.documentElement.clientWidth;
-		var Y = document.documentElement.clientHeight;
-		oName.style.transform = "translateY(0)";
-	};
+	//window.onload = function (){
+//		var oPageBg = document.getElementById('pageBg');
+//		var oImg = oPageBg.children[0];
+//		var oFlyL = document.getElementById('flyL');
+//		var oName = document.getElementById('name');
+//		var aP = oName.children;
+//		var X = document.documentElement.clientWidth;
+//		var Y = document.documentElement.clientHeight;
+//		var oNext = document.getElementById('next');
+//		var iNow = 0;
+//		for( var i = 0; i<aP.length; i++){
+//			aP[i].style.transform = "translateY(0)";		
+//		}
+//		//oNext.onclick = function (){
+////			timer = setInterval(function (){
+////				iNow++;
+////				if(iNow == oImg.offsetHeight){
+////					clearInterval(timer);
+////				}
+////				oPageBg.style.top = -iNow+'px';	
+////			},16);	
+////		};		
+//	};
 </script>
 </head>
 <body>
-	<div class="pageF">
+	<div class="page" id="page">
     	<div class="pageBg" id="pageBg">
         	<img src="img/page1bg.jpg" alt="" />
-            <!-- <div class="flyL" id="flyL">
-                <img src="img/fly.png" alt="" />
-            </div>-->
-            <div class="name" id="name">
-                <p class="nameCon">姓名:王盟盟</p>
-                <p class="nameWeb">web前端工程师</p>
-            </div>
+            
         </div>
-       
+        <div class="name" id="name">
+            <p class="nameCon">姓名:王盟盟</p>
+            <p class="nameWeb">web前端工程师</p>
+        </div>
+        <div class="pageS">
+            <img src="img/page2bg.jpg" alt="" />
+            <div class="hc" id="hc"><a href="javascript:;">HTML/CSS</a></div>
+        </div>
 	</div>
 </body>
 </html>
