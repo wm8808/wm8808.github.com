@@ -19,14 +19,14 @@ window.onload = function (){
 		}
 		timer = setTimeout(function (){
 			clearInterval(timer);
-			move(oPage,{top:-oPage.offsetHeight},{duration:1500,complete:function (){
-				move(oH2,{top:50},{duration:2000,complete:function (){
-					move(oHc,{left:160},{duration:800,complete:function (){
-						move(oJs,{bottom:190},{duration:1500,complete:function (){
-							move(oHc3,{right:160},{duration:1200,complete:function (){
+			move(oPage,{top:-oPage.offsetHeight},{duration:500,complete:function (){
+				move(oH2,{top:50},{duration:500,complete:function (){
+					move(oHc,{left:160},{duration:500,complete:function (){
+						move(oJs,{bottom:190},{duration:500,complete:function (){
+							move(oHc3,{right:160},{duration:500,complete:function (){
 								for( var i = 0; i<aCon.length; i++){
 									//aCon[i].style.transform = "translateX(1078px)";
-									move(aCon[i],{opacity:1},{duration:5000,complete:function (){
+									move(aCon[i],{opacity:1},{duration:500,complete:function (){
 											
 									}});	
 								}	
