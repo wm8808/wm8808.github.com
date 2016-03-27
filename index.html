@@ -9,31 +9,6 @@
 <link href="css/index.css" rel="stylesheet" />
 <script src="js/move.js"></script>
 <script src="js/index.js"></script>
-<script>
-	//window.onload = function (){
-//		var oPageBg = document.getElementById('pageBg');
-//		var oImg = oPageBg.children[0];
-//		var oFlyL = document.getElementById('flyL');
-//		var oName = document.getElementById('name');
-//		var aP = oName.children;
-//		var X = document.documentElement.clientWidth;
-//		var Y = document.documentElement.clientHeight;
-//		var oNext = document.getElementById('next');
-//		var iNow = 0;
-//		for( var i = 0; i<aP.length; i++){
-//			aP[i].style.transform = "translateY(0)";		
-//		}
-//		//oNext.onclick = function (){
-////			timer = setInterval(function (){
-////				iNow++;
-////				if(iNow == oImg.offsetHeight){
-////					clearInterval(timer);
-////				}
-////				oPageBg.style.top = -iNow+'px';	
-////			},16);	
-////		};		
-//	};
-</script>
 </head>
 <body>
 	<div class="page" id="page">
@@ -45,9 +20,10 @@
             <p class="nameCon">姓名:王盟盟</p>
             <p class="nameWeb">web前端工程师</p>
         </div>
-        <div class="pageS">
+        <div class="pageS" id="pageS">
             <img src="img/page2bg.jpg" alt="" />
-            <div class="con">
+            <h2>技能展示</h2>
+            <div class="con" id="con">
             	<p>熟练掌握HTML、CSS等网页制作技术，熟悉页面构架及布局;</p>
             	<p>能熟练应用DIV+CSS来制作符合W3C规范的静态网页；</p>
             	<p>熟悉javascript，熟练使用原生DOM操作，可离库书写代码；</p>
