@@ -11,9 +11,13 @@
 .name .nameCon{ font-size:58px; color:#f7e11c;}
 .name .nameWeb{ font-size:60px; color:#e7881e; margin-top:108px;}
 .pageS{ position:relative; left:0; top:0; z-index:1;}
-.pageS .hc{ width:156px; height:156px; border-radius:50%; background:#11c537; position:absolute; left:-156px; top:300px; text-align:center; line-height:156px; font-size:28px;}
-.hc a{ color:#fff;}
-
+.pageS .hc,.pageS .js,.pageS .hc3{ width:156px; height:156px; border-radius:50%; text-align:center; line-height:156px; font-size:28px;}
+.pageS .hc{ position:absolute; left:-160px; top:300px; background:#11c537; }
+.pageS .js{ position:absolute; right:-650px; bottom:190px; background:#f6084b; }
+.pageS .hc3{ position:absolute; right:-160px; top:146px; background:#f6a508; }
+.pageS a{ color:#fff;}
+.pageS .con{ width:510px; height:210px; position:absolute; left:430px; top:230px; line-height:38px;}
+.con p{ font-size:18px; color:#6d7175;}
 
 
 
