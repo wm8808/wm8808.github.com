@@ -35,3 +35,4 @@ table{ border-collapse:collapse;text-align:center; vertical-align:middle;}
  .w1170{ width:1170px; margin:0 auto; }
  .ml24{ margin-left:24px; }
  .mr24{ margin-right:24px; }
+.wrap{ width:100%; margin:0 10%;}

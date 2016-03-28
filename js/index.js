@@ -15,18 +15,21 @@ window.onload = function (){
 		var iNow = 0;
 		var timer = null;
 		for( var i = 0; i<aP.length; i++){
-			aP[i].style.transform = "translateY(0)";		
+			aP[i].style.WebkitTransform = "translateY(0)";
+			aP[i].style.msTransform = "translateY(0)";
+			aP[i].style.MozTransform = "translateY(0)";
+			aP[i].style.transform = "translateY(0)";			
 		}
 		timer = setTimeout(function (){
 			clearInterval(timer);
 			move(oPage,{top:-oPage.offsetHeight},{duration:500,complete:function (){
 				move(oH2,{top:50},{duration:500,complete:function (){
 					move(oHc,{left:160},{duration:500,complete:function (){
-						move(oJs,{bottom:190},{duration:500,complete:function (){
+						move(oJs,{bottom:90},{duration:500,complete:function (){
 							move(oHc3,{right:160},{duration:500,complete:function (){
 								for( var i = 0; i<aCon.length; i++){
 									//aCon[i].style.transform = "translateX(1078px)";
-									move(aCon[i],{opacity:1},{duration:500,complete:function (){
+									move(aCon[i],{opacity:1},{duration:4000,complete:function (){
 											
 									}});	
 								}	

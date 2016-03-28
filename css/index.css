@@ -1,20 +1,44 @@
 .page{ position:absolute; left:0; top:0; width:100%; height:100%;}
-/*.page .pageBg{ position:absolute; left:0; top:0; z-index:2; width:100%; height:100%;}*/
 .page .pageBg{ _position:absolute; left:0; top:0; z-index:2; width:100%; height:100%; }
 .pageBg img{ width:100%; height:100%; position::fixed; left:0; top:0;}
-.page .flyL{ position:absolute; left:0; bottom:21px; transition:1s all ease; transform:translate(0,0);}
-/*.pageF .flyL:active{ transform:translate(200%,-200%);}*/
+.page .flyL{ position:absolute; left:0; bottom:21px; -webkit-transition:1s all ease;
+													 -ms-transition:1s all ease; 
+													 -moz-transition:1s all ease;  
+													 transition:1s all ease; 
+													 -webkit-transform:translate(0,0); 
+													 -ms-transform:translate(0,0); 
+													 -moz-transform:translate(0,0); 
+													 transform:translate(0,0);}
 .page .name{ width:434px; height:226px; position:absolute; left:50%; top:50%; margin-left:-217px; margin-top:-113px; }
-.name p{ transition:1s all ease;}
-.name p:nth-of-type(1){ transition-delay:0.05s; transform:translateY(-500px);}
-.name p:nth-of-type(2){ transition-delay:1s; transform:translateY(500px);}
+.name p{ -webkit-transition:0.5s all ease; 
+		 -ms-transition:0.5s all ease; 
+		 -moz-transition:0.5s all ease; 
+		 transition:0.5s all ease;
+		 }
+.name p:nth-of-type(1){ -webkit-transition-delay:0.05s; 
+						-ms-transition-delay:0.05s; 
+						-moz-transition-delay:0.05s; 
+						transition-delay:0.05s; 
+						-webkit-transform:translateY(-500px); 
+						-ms-transform:translateY(-500px); 
+						-moz-transform:translateY(-500px); 
+						transform:translateY(-500px);}
+.name p:nth-of-type(2){ -webkit-transition-delay:1s; 
+						-ms-transition-delay:1s; 
+						-moz-transition-delay:1s; 
+						transition-delay:1s; 
+						-webkit-transform:translateY(500px); 
+						-ms-transform:translateY(500px); 
+						-moz-transform:translateY(500px); 
+						transform:translateY(500px);}
 .name .nameCon{ font-size:58px; color:#f7e11c;}
 .name .nameWeb{ font-size:60px; color:#e7881e; margin-top:108px;}
 .pageS{ position:relative; left:0; top:0; z-index:1; overflow:hidden;}
+.pageS img{ width:100%; height:100%;}
 .pageS h2{ font-size:48px; color:#2b3540; position:absolute; left:40%; top:-50px;}
 .pageS .hc,.pageS .js,.pageS .hc3{ width:156px; height:156px; border-radius:50%; text-align:center; line-height:156px; font-size:28px;}
 .pageS .hc{ position:absolute; left:-160px; top:300px; background:#11c537; }
-.pageS .js{ position:absolute; right:650px; bottom:-190px; background:#f6084b; }
+.pageS .js{ position:absolute; right:650px; bottom:-100px; background:#f6084b; }
 .pageS .hc3{ position:absolute; right:-160px; top:146px; background:#f6a508; }
 .pageS a{ color:#fff;}
 .pageS .con{ width:510px; height:210px; position:absolute; left:430px; top:230px; line-height:38px;}
@@ -26,11 +50,16 @@
 .con p:nth-of-type(5){ -webkit-transition-delay:5s; top:120px;}
 .con p:nth-of-type(6){ -webkit-transition-delay:6s; top:150px;}*/
 
-
-
-
-
-
-
+/***************************page2***********************************************/
+.page2{ width:100%; height:100%; position:absolute; left:0; top:0;}
+.page2 .top{ width:100%; height:16%; _position:absolute; left:0; top:0; overflow:hidden; background:#828282; opacity:0.8; filter:alpha(opacity=80);}
+.top img{ width:100%; top:100%;}
+.w80{ width:80%; height:100%; margin:0 5%;}
+.page2 .nav{ width:100%; height:16%;  position:absolute; left:0; top:0;  display:-webkit-flex; display:flex; text-align:center; }
+.nav li{  -webkit-flex:4; flex:4; font-size:20px; padding-top:4%;}
+.nav li a{ color:#12b737;}
+.nav li.active a{ color:#fff;}
+.page2 .con{ width:1200px; background:red; _position:absolute; left:0; top:16%; text-align:center; overflow:hidden;}
+.con li{ width:242px; height:135px; float:left; margin-right:80px; }
 
 
