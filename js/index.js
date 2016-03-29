@@ -38,16 +38,9 @@ window.onload = function (){
 					}});
 				}});	
 			}});
-			/*move(oH2,{top:50},{duration:5000,complete:function (){
-				move(oPage,{top:-oPage.offsetHeight},{duration:2000,complete:function (){
-					move(oHc,{left:160},{duration:800,complete:function (){
-						move(oJs,{right:650},{duration:1500,complete:function (){
-							move(oHc3,{right:160},{duration:1200});
-						}});	
-					}});	
-				}});
-			}});*/
 		},3000);
-		
-	})();	
+		oHc3.onclick = function (){
+			window.open('page2.html','_blank');	
+		};
+	})();
 };
