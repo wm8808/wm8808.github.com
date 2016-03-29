@@ -41,7 +41,7 @@
 .pageS .js{ position:absolute; right:650px; bottom:-100px; background:#f6084b; }
 .pageS .hc3{ position:absolute; right:-160px; top:146px; background:#f6a508; }
 .pageS a{ color:#fff;}
-.pageS .con{ width:510px; height:210px; position:absolute; left:430px; top:230px; line-height:38px;}
+.pageS .con{ width:510px; height:210px; position:absolute; left:50%; top:45%; margin-left:-255px; margin-top:-120px; line-height:38px;}
 .pageS .con p{ font-size:18px; color:#6d7175; _-webkit-transition:1s all ease;  _position:absolute; left:-1078px; opacity:0; filter:alpha(opacity=0);}
 /*.con p:nth-of-type(1){ -webkit-transition-delay:1s; top:0;}
 .con p:nth-of-type(2){ -webkit-transition-delay:2s; top:30px;}
