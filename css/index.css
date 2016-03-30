@@ -60,7 +60,7 @@
 .nav li a{ color:#12b737;}
 .nav li.active a{ color:#fff;}
 .page2 #conAll{ overflow:hidden;}
-.page2 .con{ width:1200px; min-height:376px; _background:red; padding:0 20px; _position:absolute; left:0; top:16%; text-align:center; _overflow:hidden; float:left; margin:0px 0 20px 0;}
+.page2 .con{  width:100%; min-height:376px; _background:red; padding:0 20px; _position:absolute; left:0; top:16%; text-align:center; _overflow:hidden; float:left; margin:0px 0 20px 0;}
 .page2 .con li{ width:273px; height:188px; float:left; margin-right:36px; padding-top:18px; margin-top:20px; }
 .page2 .con li.show{  box-shadow:0px 2px 10px #000; }
 .page2 .con li:nth-of-type(4n){ margin-right:0;}
