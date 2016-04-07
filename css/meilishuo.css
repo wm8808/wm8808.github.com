@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+.top{ background:#f5f5f5; height:38px; border-top:1px solid #eee; border-bottom:1px solid #eee;}
+.top ul{ margin-top:10px;}
+.top li{ height:18px; line-height:18px; padding:0 15px; border-right:1px dotted #cbcbcb;}
+.top i{ background:url(../images/weixin.png) no-repeat; width:16px; height:16px; margin-right:3px;}
+.top .qqlogo{ background:url(../images/qq.png) no-repeat; width:16px; height:16px; margin-right:3px;}
+.top .shop{ background:url(../images/shop.png) no-repeat; width:16px; height:16px; margin-right:3px;}
+.top b{ background:#999; height:15px; line-height:15px; color:#fff; padding:0 6px; border-radius:10px; margin-left:6px; }
+.top .order{ background:url(../images/order.png) no-repeat; width:16px; height:16px; margin-right:3px;}
+.top .downapp{ background:url(../images/downapp.png) no-repeat; width:16px; height:16px; margin-right:3px;}
+
+
+.logosearch .logo{ background:url(../images/logo.png) no-repeat; text-indent:-9999em; width:106px; height:36px; margin-top:15px;}
+.logosearch img{ margin-left:254px; margin-top:17px;}
+.nav{background:#ff6599; height:40px; }
+.w1074{ margin-top:15px; padding-left:126px; width:1074px;}
+.w1074 li{ height:40px; padding:0 14px;}
+.w1074 .nav_list{ position:relative; bacground:#fff;}
+.w1074 li:hover{ background:#ed3577;}
+.w1074 a{ font-size:14px; color:#fff; line-height:40px; font-weight:bold;}
+.w1074 .nav_list1{ position:absolute; top:40px; left:0;width:100%; display:none; background:#fff;}
+.w1074 .nav_list1 a{ color:#ff6599; display:block;}
+.w1074 .border{ border:1px solid red; text-align:center;}
+.w1074 .nav_list:hover .nav_list1{ display:block; }
+.w1074 .active{ background:#ed3577; }
+.w1074 .list{ background:url(../images/xlcd.png) no-repeat; width:5px; height:3px; display:inline-block; margin-top:19px; margin-left:5px;}
+
+
+
+.sidebar{ width:238px; height:572px; border:1px solid #ccc;}
+.sidebar .navList{ border-bottom:1px dotted #ccc; margin-left:20px; margin-right:20px; position:relative; cursor:pointer;}
+.sidebar .navList:hover .w437{ display:block;}
+.sidebar .navList:hover{  border-bottom:1px solid #ccc; border-top:1px solid #ccc; padding-left:20px; margin:0;}
+.sidebar h3{ background:url(../images/hot.png) left 12px no-repeat; padding-top:12px; padding-left:20px; color:#f69; font-size:16px;}
+.sidebar .hotlist{ width:173px; margin-left:-7px; margin-top:8px; line-height:22px;}
+.sidebar .hotlist a{ margin-left:9px;}
+.sidebar .triangle{ color:#ccc;width:5px; height:9px; position:absolute; right:0; bottom:45px; font-size:14px;}
+.sidebar .navList:hover .triangle{ right:20px; color:#f69;}
+.sidebar .w437{ width:437px; border:1px solid #ccc; position:absolute; left:238px; top:-1px; background:#fff; display:none; z-index:7;}
+.sidebar .listCon{ position:relative;z-index:8; padding-bottom:10px;}
+.sidebar .navList:hover .listCon{border-right:1px solid #fff; margin-right:-1px;}
+.sidebar .w437 h4{ margin-left:25px; margin-top:16px; font-size:17px;}
+.sidebar .marginleft{ margin-left:8px;}
+.sidebar .w437 a{ margin-left:19px; font-size:14px; margin-right:-5px; line-height:30px; }
+.sidebar .navList{ border-bottom:none; }
+.sidebar .navList:hover .hotlist{border-bottom:none;height:70px;}
+
+
+
+.banner{ width:960px; height:574px;}
+.banner ul{ width:960px;}
+.banner ul li{ margin-left:1px;}
+.banner_top img{ display:block;}
+
+.banner li a{ float:left; margin-top:10px; margin-left:10px;}
+
+
+
+
+.hd{ margin-top:20px; border-bottom:1px solid red; padding-bottom:8px;}
+.hd i{ background:url(../images/danpin.jpg) no-repeat; width:28px; height:25px; display:block;}
+.hd h3{ font-size:20px; line-height:28px; margin-left:10px;}
+.rqlist{ width:1254px;}
+.rqlist li{ width:180px; height:400px; overflow:hidden;  margin-top:15px; float:left; margin-right:29px;}
+.rqlist .dotted{ border-bottom:1px dotted #ccc;}
+.rqlist .rqtit{ height:41px; margin-top:6px; line-height:18px;}
+.rqlist .line-through{ text-decoration:line-through; color:#999; font-size:9px; margin-left:9px;}
+.rqlist .rqprice{ color:#f69;}
+.rqlist p{ margin-top:10px;}
+
+
+
+.clothes{ margin-top:20px; border-bottom:1px solid #ccc; padding-bottom:8px;}
+.clothes h3{ background:url(../images/clothes.jpg) no-repeat; padding-left:36px; color:#f69; border-right:1px dotted #ccc; float:left; padding-right:11px; height:22px; font-size:22px;}
+.clothes p{ padding-left:8px; padding-top:5px;}
+.cl{ border-bottom:1px solid #ccc;}
+
+.cleft{width:940px;}
+.cleft li{ position:relative; margin-left:5px; margin-bottom:5px; float:left;}
+.cleft p{ position:absolute; background:#000; width:180px; height:30px; text-align:center; line-height:30px; left:0; bottom:0; color:#fff; opacity:0.3; filter:alpha(opacity=30)}
+.cleft .w940{ width:940px; margin-top:20px;}
+.cleft_b li{ width:302px; float:left; border-right:1px dotted #ccc; margin-top:10px; display:block;}
+.cleft_b h3{ margin-left:12px; font-size:16px; margin-top:2px; line-height:44px; width:35px;}
+.cleft_b h3 a{ color:#f69;}
+.cleft .words{ width:226px; line-height:22px; padding-left:18px;}
+.cleft .nborder{ border-right:none;}
+
+
+.hotclothes{ width:259px; height:611px; border-left:1px solid #ccc;}
+.hotclothes .margintop{  margin-top:20px;}
+.hotclothes h3{ margin-left:20px;}
+.hotclothes .more{ display:block;}
+.hotclothes li{margin-left:20px; margin-top:16px; width:183px; border-bottom:1px dotted #ccc; padding-bottom:6px;}
+.hotclothes li p{ float:left; margin-left:12px; line-height:19px;}
+.hotclothes .bbnone{ border-bottom:none;}
+
+
+
+.hotmagazine{ height:56px; width:1215px;}
+.hotmagazine h3{ height:21px; background:url(../images/hotmagazine.png) no-repeat; padding-left:35px; margin-top:20px;}
+.hotmagazine .hotmenu li{ float:left; border-right:1px dotted #ccc; padding:0 17px; margin-top:21px;}
+.hotmagazine .hotmenu .bdnone{ border-right:none;}
+.hotmagazine ul{  padding-bottom:20px;}
+.hotmagazine .list li{ border:1px solid #ccc; float:left; margin-right:15px; margin-top:15px;}
+
+.bottom{ background:#f5f5f5; height:311px; border-top:1px solid #ccc;}
+.bottom .fs16{ font-size:16px; font-weight:bold;}
+.bottom li{ float:left; margin-right:54px; margin-top:33px; line-height:28px;}
+.bottom li a{ display:block;}
+.bottom .tel{ background:url(../images/tel.png) no-repeat; height:35px; float:left; padding-left:48px; margin-top:33px;}
+.bottom .margintop{ margin-top:20px;}
+.bottom .marginlaft{ margin-top:20px; float:right; margin-right:10px;}
+.bottom .fridelink{ border-top:1px solid #ccc; border-bottom:1px solid #ccc; margin-top:28px; height:30px; line-height:30px;}
+.bottom .fridelink p{ display:inline-block;}
+.bottom .fridelink .more{ float:right;}
+.bottom .mt15{ margin-top:7px; line-height:22px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

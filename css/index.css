@@ -6,7 +6,7 @@
 .name .nameCon{ font-size:58px; color:#f7e11c;}
 .name .nameWeb{ font-size:60px; color:#e7881e; margin-top:108px;}
 
-.page .pageS{ width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden; background:red; z-index:3;}
+.page .pageS{ width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden; z-index:3;}
 .pageS .pageSbg{ width:100%; height:100%;}
 .pageSbg img{ width:100%; height:100%; position:absolute; left:0; top:0;}
 .pageS h2{ height:100px; font-size:48px; color:#2b3540; position:absolute; left:40%; top:-12%; transition:1s all ease; _transform:translateY(112%)}
