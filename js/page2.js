@@ -15,7 +15,6 @@ window.onload = function (){
 		
 	})();
 	;(function (){
-		
 		var oCon = document.getElementById('con');
 		var aCon = oCon.children;
 		for( var i = 0; i<aCon.length; i++){
