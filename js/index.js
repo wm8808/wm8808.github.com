@@ -1,6 +1,19 @@
 'use strict'
 window.onload = function (){
-	;(function (){
+	var oPageF = document.getElementById('pageF');
+	var oPageS = document.getElementById('pageS');
+	var oCon = document.getElementById('con');
+	var oNext = document.getElementById('next');
+	oNext.onclick = function (){
+		move(oPageF,{top:-oPageF.offsetHeight},{duration:1000});
+		move(oNext,{opacity:0},{duration:100});
+		oPageS.className += ' active';	
+		//move(oCon,{opacity:1},{duration:5000});
+	};
+	
+};
+/***
+	***;(function (){
 		var oPage = document.getElementById('page');
 		var oPageBg = document.getElementById('pageBg');
 		var oName = document.getElementById('name');
@@ -43,4 +56,4 @@ window.onload = function (){
 			window.open('page2.html','_blank');	
 		};
 	})();
-};
+	****/
