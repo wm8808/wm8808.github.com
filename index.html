@@ -5,26 +5,50 @@
 <meta name="description" content="网页描述" />
 <meta name="Keywords" content="关键字" />
 <title>王盟个人作品展示</title>
-<link href="css/base.css" rel="stylesheet" />
-<link href="css/index.css" rel="stylesheet" />
-<script src="js/move.js"></script>
-<script src="js/index.js"></script>
+<link rel="stylesheet" href="css/jquery.fullPage.css" />
+<style>
+.section1 { background:url(img/page1bg.jpg) 50%; position:relative;}
+.section1 p{ -webkit-transition:1s all ease;}
+.section1 p:nth-of-type(1){ position:absolute; left:568px; top:200px; font-size:58px; color:#f7e11c; -webkit-transform:translateY(-350px);}
+.section1 p:nth-of-type(2){ position:absolute; left:568px; top:300px; font-size:58px; color:#e7881e; -webkit-transform:translateY(-450px);}
+.section2 { background:url(img/page2bg.jpg) 50%; position:relative; overflow:hidden;}
+.section2 h2{ position:absolute; left:600px; top:52px; -webkit-transition:1s all ease; -webkit-transform:translateY(-150px); font-size:48px;}
+.section2 a{ color:#fff; display:block; width:100%; height:100%;}
+.section2 .con{ width:512px; height:218px; position:absolute; left:50%; top:50%; margin-left:-256px; margin-top:-109px;}
+.section2 .hc,.section2 .js,.section2 .hc3{ width:156px; height:156px; border-radius:50%; text-align:center; line-height:156px; -webkit-transition:1s all ease;}
+.section2 .hc{ background:#11c537; position:absolute; left:160px; top:300px; -webkit-transform:translateX(-320px);}
+.section2 .js{ background:#f6084b; position:absolute; left:762px; bottom:20px; -webkit-transform:translateY(176px);}
+.section2 .hc3{ background:#f6a508; position:absolute; right:160px; top:144px; -webkit-transform:translateX(320px);}
+
+
+
+
+#dowebok .active h2{ -webkit-transform:translateY(0);}
+#dowebok .active .hc{ -webkit-transform:translateX(0);}
+#dowebok .active .js{ -webkit-transform:translateY(0);}
+#dowebok .active .hc3{ -webkit-transform:translateX(0);}
+#dowebok .active p:nth-of-type(1){-webkit-transition-delay:0.05s; -webkit-transform:translateY(0);}
+#dowebok .active p:nth-of-type(2){ -webkit-transition-delay:1s; -webkit-transform:translateY(0);}
+.section3 { }
+</style>
+<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://cdn.dowebok.com/77/js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		'navigation': true,
+	});
+});
+</script>
+
 </head>
 <body>
-	<div class="page" id="page">
-    	<div class="pageF"  id="pageF">
-        	<div class="pageBg" id="pageBg">
-                <img src="img/page1bg.jpg" alt="" />
-            </div>
-            <div class="name" id="name">
-                <p class="nameCon">姓名:王盟盟</p>
-                <p class="nameWeb">web前端工程师</p>
-            </div>
+	<div id="dowebok">
+        <div class="section section1">
+            <P>姓&nbsp;名：王&nbsp;盟</P>
+            <p>web前端工程师</p>
         </div>
-        <div class="pageS" id="pageS">
-            <div class="pageSbg">
-            	<img src="img/page2bg.jpg" alt="" />
-            </div>
+        <div class="section section2">
             <h2>技能展示</h2>
             <div class="con" id="con">
             	<p>熟练掌握HTML、CSS等网页制作技术，熟悉页面构架及布局;</p>
@@ -38,7 +62,10 @@
             <div class="js" id="js"><a href="js.html">javascript</a></div>
             <div class="hc3" id="hc3"><a href="html5.html">HTML5</a></div>
         </div>
-	</div>
-    <div class="next" id="next">next</div>
+        <div class="section section3">
+            <h3>第三屏</h3>
+            <p>圆圈还可以设置位置，颜色，加上 tip，点击可以控制</p>
+        </div>
+    </div>
 </body>
 </html>
