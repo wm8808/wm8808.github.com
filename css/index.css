@@ -9,18 +9,18 @@
 .page .pageS{ width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden; z-index:3;}
 .pageS .pageSbg{ width:100%; height:100%;}
 .pageSbg img{ width:100%; height:100%; position:absolute; left:0; top:0;}
-.pageS h2{ height:100px; font-size:48px; color:#2b3540; position:absolute; left:40%; top:-12%; transition:1s all ease; _transform:translateY(112%)}
+.pageS h2{ height:50px; font-size:48px; color:#2b3540; position:absolute; left:40%; top:-12%; transition:1s all ease; _transform:translateY(112%)}
 .pageS .hc,.pageS .js,.pageS .hc3{ width:156px; height:156px; border-radius:50%; text-align:center; line-height:156px; font-size:28px; transition:1s all ease;}
-.pageS .hc{ position:absolute; left:-22%; top:35%; background:#11c537; _transform:translateX(244%); }
+.pageS .hc{ position:absolute; left:-12%; top:35%; background:#11c537; _transform:translateX(244%); }
 .pageS .js{ position:absolute; right:41%; bottom:-24%; background:#f6084b; _transform:translateY(-125%);}
-.pageS .hc3{ position:absolute; right:-22%; top:17%; background:#f6a508; _transform:translateX(-244%); }
+.pageS .hc3{ position:absolute; right:-12%; top:17%; background:#f6a508; _transform:translateX(-244%); }
 .pageS a{ color:#fff; display:block; width:100%; height:100%;}
 .pageS .con{ width:510px; height:210px; position:absolute; left:50%; top:45%; margin-left:-255px; margin-top:-120px; line-height:38px; opacity:0; filter:alpha(opacity=0); -webkit-animation:mymove 9s;}
 .pageS .con p{ font-size:18px; color:#6d7175; _-webkit-transition:1s all ease;  _position:absolute; left:-1078px;}
 
-.page .active h2{ transition-delay:0.05s; transform:translateY(112%)}
+.page .active h2{ transition-delay:0.05s; transform:translateY(212%)}
 .page .active .hc{ transition-delay:0.35s; transform:translateX(244%); }
-.page .active .js{ transition-delay:0.7s; transform:translateY(-125%);}
+.page .active .js{ transition-delay:0.7s; transform:translateY(-130%);}
 .page .active .hc3{ transition-delay:1s; transform:translateX(-244%); }
 .page .active .con{-webkit-animation-fill-mode:forwards;}
 @-webkit-keyframes mymove
@@ -37,7 +37,7 @@
 .nav li{  -webkit-flex:4; flex:4; font-size:20px;}
 .nav li a{ color:#fff;}
 .nav li.active a{ color:#12b737;}
-.page2 #conAll{ width:1200px; min-height:376px; margin:0 auto;}
+.page2 #conAll{ width:1200px; min-height:380px; margin:0 auto;}
 .page2 .con{ min-width:1200px; min-height:376px; margin:0 auto; text-align:center; float:left; margin:0px 0 20px 0;}
 .page2 .con li{ width:273px; height:188px; float:left; margin-right:36px; padding-top:18px; margin-top:20px; }
 .page2 .con li.show{  box-shadow:0px 2px 10px #000; }
@@ -47,7 +47,7 @@
 .page2 .con li p{ color:#666; font-size:14px; margin-top:20px;}
 .page2 .footer{ width:100%; height:120px; position:relative; left:0; top:0; margin:0 auto;}
 .footer img{  width:100%; height:100%;}
-.footer .fot_con{ position:absolute; left:90px; top:20px; color:#fff; font-size:16px; line-height:24px;}
+.footer .fot_con{ position:absolute; left:6%; top:17%; color:#fff; font-size:16px; line-height:24px;}
 
 
 
