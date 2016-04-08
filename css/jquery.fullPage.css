@@ -55,6 +55,12 @@ html, body {
     width: 100%;
     height: 100%;
 }
+#section3 .fp-tableCell {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
 .fp-slidesContainer {
     float: left;
     position: relative;
