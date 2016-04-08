@@ -37,7 +37,7 @@
 
 .center .con{ width:1200px; margin:0 auto; text-align:center; _background:red;}
 .center .con li{ float:left; width:272px; height:185px; margin-right:37px; margin-top:20px; padding-top:18px; overflow:hidden;}
-.center .con li img{ width:240px; height:135px; _-webkit-transition:.3s all ease;}
+/*.center .con li img{ width:240px; height:135px; _-webkit-transition:.3s all ease;}*/
 .center .con li:nth-of-type(4n){ margin-right:0;}
 .center .con li:nth-of-type(8n){ margin-right:0;}
 .center .con li.show{  box-shadow:0px 2px 10px #000; }
