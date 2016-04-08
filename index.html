@@ -9,11 +9,12 @@
 <link rel="stylesheet" href="css/base.css" />
 <style>
 .section1 { background:url(img/page1bg.jpg) 50%; position:relative; overflow:hidden;}
+.section1 .name{ width:500px; height:200px; position:absolute; left:50%; top:50%; margin-left:-250px; margin-top:-100px;}
 .section1 p{ -webkit-transition:1s all ease;}
-.section1 p:nth-of-type(1){ position:absolute; left:568px; top:200px; font-size:58px; color:#f7e11c; -webkit-transform:translateY(-350px);}
-.section1 p:nth-of-type(2){ position:absolute; left:568px; top:300px; font-size:58px; color:#e7881e; -webkit-transform:translateY(450px);}
+.section1 p:nth-of-type(1){ _position:absolute; left:568px; _top:200px; font-size:58px; color:#f7e11c; -webkit-transform:translateY(-350px);}
+.section1 p:nth-of-type(2){ _position:absolute; left:568px; _top:300px; font-size:58px; color:#e7881e; -webkit-transform:translateY(450px); margin-top:100px;}
 .section2 { background:url(img/page2bg.jpg) 50%; position:relative; overflow:hidden;}
-.section2 h2{ position:absolute; left:600px; top:52px; -webkit-transition:1s all ease; -webkit-transform:translateY(-150px); font-size:48px;}
+.section2 h2{ position:absolute; left:45%; top:52px; -webkit-transition:1s all ease; -webkit-transform:translateY(-150px); font-size:48px;}
 .section2 a{ color:#fff; display:block; width:100%; height:100%;}
 .section2 .con{ width:512px; height:218px; position:absolute; left:50%; top:50%; margin-left:-256px; margin-top:-109px; line-height:38px;}
 .section2 .con p{ font-size:18px; color:#6d7175;}
@@ -31,20 +32,20 @@
 #dowebok .active .hc3{ -webkit-transform:translateX(0);}
 #dowebok .active p:nth-of-type(1){-webkit-transition-delay:0.5s; -webkit-transform:translateY(0);}
 #dowebok .active p:nth-of-type(2){ -webkit-transition-delay:1s; -webkit-transform:translateY(0);}
-.section3{ position:relative; overflow:hidden;}
+.section3{ position:relative; width:100%; overflow:hidden;}
 .section3 .top{ background:url(img/top.jpg) no-repeat; width:100%; }
-.top .nav{ display:-webkit-flex; display:flex; min-width:1200px; height:116px;  line-height:116px; text-align:center;}
+.top .nav{ display:-webkit-flex; display:flex; width:100%; height:116px;  line-height:116px; text-align:center;}
 .nav li{ float:left; -webkit-flex:4; flex:4; font-size:20px;}
 .nav li a{ color:#fff;}
 .nav li.active a{ color:#12b737;}
-.section3 .center{ position:relative; min-width:1200px; margin:0 auto; text-align:center;}
-.center .con{ width:1200px; min-height:376px; margin:0 auto; text-align:center; _background:red;}
+.section3 .center{ position:relative; min-width:1200px;  min-height:376px; margin:0 auto; text-align:center;}
+.center .con{ width:1200px; margin:0 auto; text-align:center; _background:red;}
 .center .con li{ float:left; width:272px; height:180px; margin-right:37px; margin-top:20px; padding-top:18px;}
 .center .con li:nth-of-type(4n){ margin-right:0;}
 .center .con li:nth-of-type(8n){ margin-right:0;}
 .center .con li.show{  box-shadow:0px 2px 10px #000; }
 .center .con li p{ margin-top:20px;}
-.center .page { min-width:200px; _position:absolute; right:0; bottom:0; height:20px;  _background:red; margin-top:10px; margin-bottom:10px; text-align:right;}
+.center .page { min-width:200px; _position:absolute; right:0; bottom:0; height:20px;  _background:red; margin-top:10px; margin-bottom:10px;}
 .page li{ float:left; width:60px; height:20px; text-align:center; line-height:20px; margin-left:10px; border:1px solid #ccc;}
 .section3 .footer{ background:#1f2f3c; width:100%; height:116px; line-height:116px}
 .footer .fot_con{ margin-left:100px;}
@@ -66,8 +67,10 @@ $(function(){
 <body>
 	<div id="dowebok">
         <div class="section section1">
-            <P>姓&nbsp;名：王&nbsp;盟</P>
-            <p>web前端工程师</p>
+            <div class="name">
+            	<P>姓&nbsp;名：王&nbsp;盟</P>
+            	<p>web前端工程师</p>
+            </div>
         </div>
         <div class="section section2">
             <h2>技能展示</h2>
