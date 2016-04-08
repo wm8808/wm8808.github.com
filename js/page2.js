@@ -26,5 +26,12 @@ window.onload = function (){
 				this.className = 'show';	
 			};
 		}		
+	})();
+	;(function (){
+		var oPrev = document.getElementById('prev');
+		var oNext = document.getElementById('next');
+		oNext.onclick = function (){
+				
+		};	
 	})();	
 };
