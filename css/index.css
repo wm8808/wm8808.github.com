@@ -51,7 +51,8 @@ div.fp-tableCell:nth-type-of(3){vertical-align:top}
 	.section3 .center{ position:relative; width:100%; height:70%; margin:5% auto 0; text-align:center;}
 	.center .con{ width:1600px; margin:0 auto; text-align:center;}
 	.center .con li{ float:left; width:350px; height:245px; margin-right:37px; margin-top:20px; padding-top:18px;}
-	.center .con li img{ width:90%;}
+	.center .con li img{ width:90%; -webkit-transition:0.3s all ease;}
+	.center .con li:hover img{ width:92%;}
 	.center .con li:nth-of-type(4n){ margin-right:0;}
 	.center .con li:nth-of-type(8n){ margin-right:0;}
 	.center .con li p{ margin-top:30px; font-size:}
