@@ -1,17 +1,117 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>具体实例</title>
-<link href="css/base.css" rel="stylesheet" />
-<link href="css/index.css" rel="stylesheet" />
-<script src="js/move.js"></script>
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>王盟个人作品展示</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/index.css" />
+<style>
+/*.section1 { position:relative; overflow:hidden;}
+.section1 .bg{ position:absolute; left:0; top:0; width:100%; height:100%;}
+.section1 .bg img{ display:block; width:100%; height:100%;}
+.section1 .name{ width:500px; height:200px; position:absolute; left:50%; top:50%; margin-left:-250px; margin-top:-100px;}
+.section1 p{ -webkit-transition:1s all ease;}
+.section1 p:nth-of-type(1){ _position:absolute; left:568px; _top:200px; font-size:58px; color:#f7e11c; -webkit-transform:translateY(-350px);}
+.section1 p:nth-of-type(2){ _position:absolute; left:568px; _top:300px; font-size:58px; color:#e7881e; -webkit-transform:translateY(450px); margin-top:100px;}
+.section2 { background:url(img/page2bg.jpg) 100%; width:100%; height:100%; position:relative; overflow:hidden;}
+.section2 .bg{ position:absolute; left:0; top:0; width:100%; height:100%;}
+.section2 .bg img{ display:block; width:100%; height:100%;}
+.section2 h2{ position:absolute; left:45%; top:52px; -webkit-transition:1s all ease; -webkit-transform:translateY(-150px); font-size:48px;}
+.section2 a{ color:#fff; display:block; width:100%; height:100%;}
+.section2 .con{ width:512px; height:218px; position:absolute; left:50%; top:50%; margin-left:-256px; margin-top:-109px; line-height:38px;}
+.section2 .con p{ font-size:18px; color:#6d7175;}
+.section2 .hc,.section2 .js,.section2 .hc3{ width:156px; height:156px; border-radius:50%; text-align:center; line-height:156px; -webkit-transition:1s all ease; font-size:26px; color:#fff;}
+.section2 .hc{ background:#11c537; position:absolute; left:160px; top:300px; -webkit-transform:translateX(-320px);}
+.section2 .js{ background:#f6084b; position:absolute; left:762px; bottom:20px; -webkit-transform:translateY(176px);}
+.section2 .hc3{ background:#f6a508; position:absolute; right:160px; top:144px; -webkit-transform:translateX(320px);}
+
+
+
+
+#dowebok .active h2{ -webkit-transform:translateY(0);}
+#dowebok .active .hc{ -webkit-transform:translateX(0);}
+#dowebok .active .js{ -webkit-transform:translateY(0);}
+#dowebok .active .hc3{ -webkit-transform:translateX(0);}
+#dowebok .active p:nth-of-type(1){-webkit-transition-delay:0.5s; -webkit-transform:translateY(0);}
+#dowebok .active p:nth-of-type(2){ -webkit-transition-delay:1s; -webkit-transform:translateY(0);}
+.section3{ position:relative; width:100%; height:100%; overflow:hidden;}
+.section3 .top{ background:url(img/top.jpg) 100%; width:100%; }
+.top .nav{ display:-webkit-flex; display:flex; width:100%; height:116px;  line-height:116px; text-align:center;}
+.nav li{ float:left; -webkit-flex:4; flex:4; font-size:20px;}
+.nav li a{ color:#fff;}
+.nav li.active a{ color:#12b737;}
+.section3 .center{ position:relative; _min-width:1200px; width:100%; min-height:70%; margin:0 auto; text-align:center;}
+.center .con{ width:1200px; margin:0 auto; text-align:center; _background:red;}
+.center .con li{ float:left; width:272px; height:180px; margin-right:37px; margin-top:20px; padding-top:18px;}
+.center .con li:nth-of-type(4n){ margin-right:0;}
+.center .con li:nth-of-type(8n){ margin-right:0;}
+.center .con li.show{  box-shadow:0px 2px 10px #000; }
+.center .con li p{ margin-top:20px;}
+.center .page { min-width:200px; _position:absolute; right:0; bottom:0; height:20px;  _background:red; margin-top:10px; _margin-bottom:10px;}
+.page li{ float:left; width:60px; height:20px; text-align:center; line-height:20px; margin-left:10px; border:1px solid #ccc;}
+.section3 .footer{ background:#1f2f3c; width:100%; height:116px; line-height:116px}
+.footer .fot_con{ margin-left:100px;}
+.fot_con p{ color:#fff; font-size:16px; line-height:24px;}*/
+
+</style>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
 <script src="js/page2.js"></script>
+<script>
+$(function(){
+    /*$('#dowebok').fullpage({
+        //sectionsColor : ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
+		'navigation': true,
+    });*/
+
+    $(window).resize(function(){
+        autoScrolling();
+    });
+
+    function autoScrolling(){
+        var $ww = $(window).width();
+        if($ww < 1024){
+            $.fn.fullpage.setAutoScrolling(false);
+        } else {
+            $.fn.fullpage.setAutoScrolling(true);
+        }
+    }
+
+    autoScrolling();
+});
+
+</script>
+
 </head>
-	<div class="page2">
-    	<div class="top">
-        	<img src="img/top.jpg" alt="" />
-            <div class="w80">
+<body>
+	<div id="dowebok">
+        <div class="section section1">
+        	<div class="bg"><img src="img/page1bg.jpg" alt="" /></div>
+            <div class="name">
+            	<P>姓&nbsp;名：王&nbsp;盟</P>
+            	<p>web前端工程师</p>
+            </div>
+        </div>
+        <div class="section section2">
+        	<div class="bg"><img src="img/page2bg.jpg" alt="" /></div>
+            <h2>技能展示</h2>
+            <div class="con">
+            	<p>熟练掌握HTML、CSS等网页制作技术，熟悉页面构架及布局;</p>
+            	<p>能熟练应用DIV+CSS来制作符合W3C规范的静态网页；</p>
+            	<p>熟悉javascript，熟练使用原生DOM操作，可离库书写代码；</p>
+            	<p>熟悉JQuery脚本使用，能够自主编写JS实现相关前台功能；</p>
+            	<p>掌握Ajax、jsonp前端交互技术，对angularjs有一定了解；</p>
+            	<p>熟悉HTML5+CSS3+JS编程，熟悉JS性能优化；</p>
+            </div>
+            <div class="hc" id="hc"><a href="html.html">HTML/CSS</a></div>
+            <div class="js" id="js"><a href="js.html">javascript</a></div>
+            <div class="hc3" id="hc3"><a href="html5.html">HTML5</a></div>
+        </div>
+        <div class="section section3">
+            <div class="top">
             	<ul class="nav clearFix" id="nav">
                     <li><a href="index.html">HOME</a></li>
                     <li class="active"><a href="html.html">HTML/CSS</a></li>
@@ -19,28 +119,30 @@
                     <li><a href="html5.html">HTML5</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="clearFix" id="conAll">
-        	<ul class="con clearfix" id="con">
-                <li class="show"><a href="meilishuo.html"><img src="img/mls.jpg" alt="" /><p>美丽说首页</p></a></li>
-                <li><a href="xiaomi.html"><img src="img/xiaomi.jpg" alt="" /><p>小米首页</p></a></li>
-                <li><a href="mnls.html"><img src="img/mnls.jpg" alt="" /><p>蒙娜丽莎婚纱摄影</p></a></li>
-                <li><a href="youku.html"><img src="img/youku.jpg" alt="" /><p>优酷首页</p></a></li>
-                <li><a href="meituan/mtshouy.html"><img src="img/mt.jpg" alt="" /><p>美团首页</p></a></li>
-                <li><a href="moshou/index.html"><img src="img/moshou.jpg" alt="" /><p>魔兽首页</p></a></li>
-                <li><a href="huaban/index.html"><img src="img/huaban.jpg" alt="" /><p>花瓣首页</p></a></li>
-                <li><a href="zishiy/index.html"><img src="img/zishiying.jpg" alt="" /><p>美团自适应</p></a></li>
-            </ul>
-        </div>
-        <div class="footer">
-        	<img src="img/ft.jpg" alt="" />
-            <div class="w80 fot_con">
-            	<p>姓&nbsp;名：王盟盟</p>
-                <p>电&nbsp;话：15810526517</p>
-                <p>邮&nbsp;箱：wangm8808@sina.com</p>
+            <div class="center clearfix">
+            	<ul class="con clearfix" id="con">
+                    <li><a href="meilishuo.html"><img src="img/mls.jpg" alt="" /><p>美丽说首页</p></a></li>
+                    <li class="show"><a href="xiaomi.html"><img src="img/xiaomi.jpg" alt="" /><p>小米首页</p></a></li>
+                    <li><a href="mnls.html"><img src="img/mnls.jpg" alt="" /><p>蒙娜丽莎婚纱摄影</p></a></li>
+                    <li><a href="youku.html"><img src="img/youku.jpg" alt="" /><p>优酷首页</p></a></li>
+                    <li><a href="meituan/mtshouy.html"><img src="img/mt.jpg" alt="" /><p>美团首页</p></a></li>
+                    <li><a href="moshou/index.html"><img src="img/moshou.jpg" alt="" /><p>魔兽首页</p></a></li>
+                    <li><a href="huaban/index.html"><img src="img/huaban.jpg" alt="" /><p>花瓣首页</p></a></li>
+                    <li><a href="zishiy/index.html"><img src="img/zishiying.jpg" alt="" /><p>美团自适应</p></a></li>
+                </ul>
+                <ul class="page fr clearfix">
+                	<li>上一页</li>
+                	<li>下一页</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div class="fot_con">
+                    <p>姓&nbsp;名：王盟</p>
+                    <p>电&nbsp;话：15810526517</p>
+                    <p>邮&nbsp;箱：wangm8808@sina.com</p>
+                </div>
             </div>
         </div>
     </div>
-<body>
 </body>
 </html>

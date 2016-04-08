@@ -4,12 +4,13 @@ window.onload = function (){
 	;(function (){
 		var oNav = document.getElementById('nav');
 		var aBtn = oNav.children;
+		var aA = oNav.getElementsByTagName('a');
 		for( var i = 0; i<aBtn.length; i++){
-			aBtn[i].onmouseover = function (){
+			aBtn[i].onclick = function (){
 				for( var i = 0; i<aBtn.length; i++){
 					aBtn[i].className = '';
 				}
-				this.className = 'active';	
+				this.className = 'active';
 			};
 		}
 		

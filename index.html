@@ -7,8 +7,9 @@
 <title>王盟个人作品展示</title>
 <link rel="stylesheet" href="css/jquery.fullPage.css" />
 <link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/index.css" />
 <style>
-.section1 { position:relative; overflow:hidden;}
+/*.section1 { position:relative; overflow:hidden;}
 .section1 .bg{ position:absolute; left:0; top:0; width:100%; height:100%;}
 .section1 .bg img{ display:block; width:100%; height:100%;}
 .section1 .name{ width:500px; height:200px; position:absolute; left:50%; top:50%; margin-left:-250px; margin-top:-100px;}
@@ -42,7 +43,7 @@
 .nav li{ float:left; -webkit-flex:4; flex:4; font-size:20px;}
 .nav li a{ color:#fff;}
 .nav li.active a{ color:#12b737;}
-.section3 .center{ position:relative; min-width:1200px; min-height:70%; margin:0 auto; text-align:center;}
+.section3 .center{ position:relative; _min-width:1200px; width:100%; min-height:70%; margin:0 auto; text-align:center;}
 .center .con{ width:1200px; margin:0 auto; text-align:center; _background:red;}
 .center .con li{ float:left; width:272px; height:180px; margin-right:37px; margin-top:20px; padding-top:18px;}
 .center .con li:nth-of-type(4n){ margin-right:0;}
@@ -53,7 +54,7 @@
 .page li{ float:left; width:60px; height:20px; text-align:center; line-height:20px; margin-left:10px; border:1px solid #ccc;}
 .section3 .footer{ background:#1f2f3c; width:100%; height:116px; line-height:116px}
 .footer .fot_con{ margin-left:100px;}
-.fot_con p{ color:#fff; font-size:16px; line-height:24px;}
+.fot_con p{ color:#fff; font-size:16px; line-height:24px;}*/
 
 </style>
 <script src="js/jquery.min.js"></script>
@@ -61,10 +62,27 @@
 <script src="js/page2.js"></script>
 <script>
 $(function(){
-	$('#dowebok').fullpage({
+    $('#dowebok').fullpage({
+        //sectionsColor : ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
 		'navigation': true,
-	});
+    });
+
+    $(window).resize(function(){
+        autoScrolling();
+    });
+
+    function autoScrolling(){
+        var $ww = $(window).width();
+        if($ww < 1024){
+            $.fn.fullpage.setAutoScrolling(false);
+        } else {
+            $.fn.fullpage.setAutoScrolling(true);
+        }
+    }
+
+    autoScrolling();
 });
+
 </script>
 
 </head>
