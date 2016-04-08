@@ -8,12 +8,16 @@
 <link rel="stylesheet" href="css/jquery.fullPage.css" />
 <link rel="stylesheet" href="css/base.css" />
 <style>
-.section1 { background:url(img/page1bg.jpg) 50%; position:relative; overflow:hidden;}
+.section1 { position:relative; overflow:hidden;}
+.section1 .bg{ position:absolute; left:0; top:0; width:100%; height:100%;}
+.section1 .bg img{ display:block; width:100%; height:100%;}
 .section1 .name{ width:500px; height:200px; position:absolute; left:50%; top:50%; margin-left:-250px; margin-top:-100px;}
 .section1 p{ -webkit-transition:1s all ease;}
 .section1 p:nth-of-type(1){ _position:absolute; left:568px; _top:200px; font-size:58px; color:#f7e11c; -webkit-transform:translateY(-350px);}
 .section1 p:nth-of-type(2){ _position:absolute; left:568px; _top:300px; font-size:58px; color:#e7881e; -webkit-transform:translateY(450px); margin-top:100px;}
-.section2 { background:url(img/page2bg.jpg) 50%; width:100%; height:100%; position:relative; overflow:hidden;}
+.section2 { background:url(img/page2bg.jpg) 100%; width:100%; height:100%; position:relative; overflow:hidden;}
+.section2 .bg{ position:absolute; left:0; top:0; width:100%; height:100%;}
+.section2 .bg img{ display:block; width:100%; height:100%;}
 .section2 h2{ position:absolute; left:45%; top:52px; -webkit-transition:1s all ease; -webkit-transform:translateY(-150px); font-size:48px;}
 .section2 a{ color:#fff; display:block; width:100%; height:100%;}
 .section2 .con{ width:512px; height:218px; position:absolute; left:50%; top:50%; margin-left:-256px; margin-top:-109px; line-height:38px;}
@@ -33,7 +37,7 @@
 #dowebok .active p:nth-of-type(1){-webkit-transition-delay:0.5s; -webkit-transform:translateY(0);}
 #dowebok .active p:nth-of-type(2){ -webkit-transition-delay:1s; -webkit-transform:translateY(0);}
 .section3{ position:relative; width:100%; height:100%; overflow:hidden;}
-.section3 .top{ background:url(img/top.jpg); width:100%; }
+.section3 .top{ background:url(img/top.jpg) 100%; width:100%; }
 .top .nav{ display:-webkit-flex; display:flex; width:100%; height:116px;  line-height:116px; text-align:center;}
 .nav li{ float:left; -webkit-flex:4; flex:4; font-size:20px;}
 .nav li a{ color:#fff;}
@@ -67,12 +71,14 @@ $(function(){
 <body>
 	<div id="dowebok">
         <div class="section section1">
+        	<div class="bg"><img src="img/page1bg.jpg" alt="" /></div>
             <div class="name">
             	<P>姓&nbsp;名：王&nbsp;盟</P>
             	<p>web前端工程师</p>
             </div>
         </div>
         <div class="section section2">
+        	<div class="bg"><img src="img/page2bg.jpg" alt="" /></div>
             <h2>技能展示</h2>
             <div class="con">
             	<p>熟练掌握HTML、CSS等网页制作技术，熟悉页面构架及布局;</p>
