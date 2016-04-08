@@ -1,5 +1,4 @@
 
-div.fp-tableCell:nth-type-of(3){vertical-align:top}
 .section1 { position:relative; overflow:hidden;}
 .section1 .bg{ position:absolute; left:0; top:0; width:100%; height:100%;}
 .section1 .bg img{ display:block; width:100%; height:100%;}
@@ -38,7 +37,7 @@ div.fp-tableCell:nth-type-of(3){vertical-align:top}
 
 .center .con{ width:1200px; margin:0 auto; text-align:center; _background:red;}
 .center .con li{ float:left; width:272px; height:185px; margin-right:37px; margin-top:20px; padding-top:18px; overflow:hidden;}
-.center .con li img{ width:240px; height:135px; -webkit-transition:.3s all ease;}
+.center .con li img{ width:240px; height:135px; _-webkit-transition:.3s all ease;}
 .center .con li:nth-of-type(4n){ margin-right:0;}
 .center .con li:nth-of-type(8n){ margin-right:0;}
 .center .con li.show{  box-shadow:0px 2px 10px #000; }
@@ -52,8 +51,8 @@ div.fp-tableCell:nth-type-of(3){vertical-align:top}
 	.section3 .center{ position:relative; width:100%; height:70%; margin:5% auto 0; text-align:center;}
 	.center .con{ width:1600px; margin:0 auto; text-align:center;}
 	.center .con li{ float:left; width:350px; height:245px; margin-right:37px; margin-top:20px; padding-top:18px;}
-	.center .con li img{ width:90%; height:90%;  -webkit-transition:0.3s all ease;}
-	.center .con li:hover img{ width:95%; height:95%;}
+	.center .con li img{ width:90%; _height:90%;  -webkit-transition:0.3s all ease;}
+	/*.center .con li:hover img{ width:95%; height:95%;}*/
 	.center .con li:nth-of-type(4n){ margin-right:0;}
 	.center .con li:nth-of-type(8n){ margin-right:0;}
 	.center .con li p{ margin-top:30px; font-size:}
