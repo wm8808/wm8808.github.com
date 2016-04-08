@@ -18,12 +18,19 @@ window.onload = function (){
 	;(function (){
 		var oCon = document.getElementById('con');
 		var aCon = oCon.children;
+		var aImg = oCon.getElementsByTagName('img');
 		for( var i = 0; i<aCon.length; i++){
+			aCon[i].index = i;
 			aCon[i].onmouseover = function (){
 				for( var i = 0; i<aCon.length; i++){
 					aCon[i].className = '';
+					aImg[i].style.width = '240px';
+					aImg[i].style.height = '135px';
 				}
-				this.className = 'show';	
+				this.className = 'show';
+				aImg[this.index].style.width = '250px';
+				aImg[this.index].style.height = '145px';
+					
 			};
 		}		
 	})();
