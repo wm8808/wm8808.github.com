@@ -59,6 +59,8 @@
 </style>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
+<script src="js/move.js"></script>
+<script src="js/ajax.js"></script>
 <script src="js/page2.js"></script>
 <script>
 $(function(){
@@ -67,7 +69,7 @@ $(function(){
 		'navigation': true,
     });
 
-    $(window).resize(function(){
+    /*$(window).resize(function(){
         autoScrolling();
     });
 
@@ -80,7 +82,7 @@ $(function(){
         }
     }
 
-    autoScrolling();
+    autoScrolling();*/
 });
 
 </script>
@@ -113,13 +115,13 @@ $(function(){
         <div class="section section3" id='section3'>
             <div class="top">
             	<ul class="nav clearFix" id="nav">
-                    <li><a href="index.html">HOME</a></li>
-                    <li class="active"><a href="html.html">HTML/CSS</a></li>
-                    <li><a href="js.html">Javascript</a></li>
-                    <li><a href="html5.html">HTML5</a></li>
+                    <li><a href="index.html" target="_blank">HOME</a></li>
+                    <li class="active"><a href="html.html" target="_blank">HTML/CSS</a></li>
+                    <li><a href="js.html" target="_blank">Javascript</a></li>
+                    <li><a href="html5.html" target="_blank">HTML5</a></li>
                 </ul>
             </div>
-            <div class="center clearfix">
+            <div class="center clearfix" id="center">
             	<ul class="con clearfix" id="con">
                     <li><a href="meilishuo.html"><img src="img/mls.jpg" alt="" /><p>美丽说首页</p></a></li>
                     <li class="show"><a href="xiaomi.html"><img src="img/xiaomi.jpg" alt="" /><p>小米首页</p></a></li>
@@ -129,13 +131,14 @@ $(function(){
                     <li><a href="moshou/index.html"><img src="img/moshou.jpg" alt="" /><p>魔兽首页</p></a></li>
                     <li><a href="huaban/index.html"><img src="img/huaban.jpg" alt="" /><p>花瓣首页</p></a></li>
                     <li><a href="zishiy/index.html"><img src="img/zishiying.jpg" alt="" /><p>美团自适应</p></a></li>
+                    <li><a href="meituan/mtshouy.html"><img src="img/con01.jpg" alt="" /><p>敬请关注更多……</p></a></li>
                 </ul>
-                <ul class="page clearfix" id="page">
-                	<li id="prev">上一页</li>
-                	<li id="next">下一页</li>
-                </ul>
-                
             </div>
+            
+            <ul class="page clearfix" id="page">
+                <li id="prev">上一页</li>
+                <li id="next">下一页</li>
+            </ul>
             <div class="footer">
                 <div class="fot_con">
                     <p>姓&nbsp;名：王盟</p>

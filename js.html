@@ -59,15 +59,17 @@
 </style>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
+<script src="js/move.js"></script>
+<script src="js/ajax.js"></script>
 <script src="js/page2.js"></script>
 <script>
 $(function(){
-    /*$('#dowebok').fullpage({
+    $('#dowebok').fullpage({
         //sectionsColor : ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
-		'navigation': true,
-    });*/
+		//'navigation': true,
+    });
 
-    $(window).resize(function(){
+    /*$(window).resize(function(){
         autoScrolling();
     });
 
@@ -80,7 +82,7 @@ $(function(){
         }
     }
 
-    autoScrolling();
+    autoScrolling();*/
 });
 
 </script>
@@ -88,40 +90,18 @@ $(function(){
 </head>
 <body>
 	<div id="dowebok">
-        <div class="section section1">
-        	<div class="bg"><img src="img/page1bg.jpg" alt="" /></div>
-            <div class="name">
-            	<P>姓&nbsp;名：王&nbsp;盟</P>
-            	<p>web前端工程师</p>
-            </div>
-        </div>
-        <div class="section section2">
-        	<div class="bg"><img src="img/page2bg.jpg" alt="" /></div>
-            <h2>技能展示</h2>
-            <div class="con">
-            	<p>熟练掌握HTML、CSS等网页制作技术，熟悉页面构架及布局;</p>
-            	<p>能熟练应用DIV+CSS来制作符合W3C规范的静态网页；</p>
-            	<p>熟悉javascript，熟练使用原生DOM操作，可离库书写代码；</p>
-            	<p>熟悉JQuery脚本使用，能够自主编写JS实现相关前台功能；</p>
-            	<p>掌握Ajax、jsonp前端交互技术，对angularjs有一定了解；</p>
-            	<p>熟悉HTML5+CSS3+JS编程，熟悉JS性能优化；</p>
-            </div>
-            <div class="hc" id="hc"><a href="html.html">HTML/CSS</a></div>
-            <div class="js" id="js"><a href="js.html">javascript</a></div>
-            <div class="hc3" id="hc3"><a href="html5.html">HTML5</a></div>
-        </div>
-        <div class="section section3">
+        <div class="section section3" id='section3'>
             <div class="top">
             	<ul class="nav clearFix" id="nav">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="html.html">HTML/CSS</a></li>
-                    <li class="active"><a href="js.html">Javascript</a></li>
-                    <li><a href="html5.html">HTML5</a></li>
+                    <li><a href="index.html" target="_blank">HOME</a></li>
+                    <li><a href="html.html" target="_blank">HTML/CSS</a></li>
+                    <li class="active"><a href="js.html" target="_blank">Javascript</a></li>
+                    <li><a href="html5.html" target="_blank">HTML5</a></li>
                 </ul>
             </div>
-            <div class="center clearfix">
+            <div class="center clearfix" id="center">
             	<ul class="con clearfix" id="con">
-                    <li><a href="meilishuo.html"><img src="img/mls.jpg" alt="" /><p>美丽说首页</p></a></li>
+                    <li><a href="meilishuo.html"><img src="img/mls.jpg" alt="" /><p>美丽说首页333</p></a></li>
                     <li class="show"><a href="xiaomi.html"><img src="img/xiaomi.jpg" alt="" /><p>小米首页</p></a></li>
                     <li><a href="mnls.html"><img src="img/mnls.jpg" alt="" /><p>蒙娜丽莎婚纱摄影</p></a></li>
                     <li><a href="youku.html"><img src="img/youku.jpg" alt="" /><p>优酷首页</p></a></li>
@@ -129,12 +109,14 @@ $(function(){
                     <li><a href="moshou/index.html"><img src="img/moshou.jpg" alt="" /><p>魔兽首页</p></a></li>
                     <li><a href="huaban/index.html"><img src="img/huaban.jpg" alt="" /><p>花瓣首页</p></a></li>
                     <li><a href="zishiy/index.html"><img src="img/zishiying.jpg" alt="" /><p>美团自适应</p></a></li>
-                </ul>
-                <ul class="page fr clearfix">
-                	<li>上一页</li>
-                	<li>下一页</li>
+                    <li><a href="meituan/mtshouy.html"><img src="img/con01.jpg" alt="" /><p>敬请关注更多……</p></a></li>
                 </ul>
             </div>
+            
+            <ul class="page clearfix" id="page">
+                <li id="prev">上一页</li>
+                <li id="next">下一页</li>
+            </ul>
             <div class="footer">
                 <div class="fot_con">
                     <p>姓&nbsp;名：王盟</p>
