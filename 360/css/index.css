@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+.top{ border-bottom:2px solid #46c832; background:#fff;}
+.top_sl{ height:70px;}
+h1{ background:url(../images/logo.png) no-repeat; width:150px; height:50px; text-indent:-9999em; margin-top:15px;}
+.top .ad{ margin-top:10px;}
+.sch{ margin-top:20px;}
+.sch input{ width:462px; height:38px; background:#eee; border-radius:4px;}
+.sch img{ cursor:pointer;}
+.sch_list{ width:500px; height:280px; border:1px solid #0C0; left:0; top:38px; background:#fff; z-index:2000;}
+.sch_list li{ height:28px; line-height:28px; padding-left:15px;}
+.sch_list li a{ color:#666;}
+.sch_list li span{ display:inline-block; width:15px; height:15px; color:#fff; line-height:15px; text-align:center; }
+.top_r{ width:302px; height:44px; margin-left:68px; margin-top:26px;}
+.top_r li{ float:left; margin-left:22px;}
+.top_r li a{ background:url(../images/pic.png) no-repeat; display:block; width:49px; height:24px; padding-top:10px; padding-left:28px;}
+.top_r li .Movies{ background-position:0 0 ;}
+.top_r li .Record{ background-position:0 -200px;}
+.top_r li .app{ background-position:0 -401px;}
+.top_r .Record_list{ width:412px; height:260px; border:1px solid #46c832; left:-234px; top:36px; background:#fff; display:none; z-index:300;}
+/*************************************nav开始******************************************************************/
+.nav{ height:43px; font-size:16px; color:#666; line-height:43px; background:#fff;}
+.nav a:hover{ color:#46c832;}
+.nav_l .active{ color:#46c832;}
+.nav_l li{ float:left; margin-right:26px;}
+.nav_l .tv_list{ width:100px; height:267px; border-top:2px solid #46c832; left:-26px; top:43px; background:#fff; padding-top:6px; display:none; z-index:3000;}
+.nav_l .video_list{ left:-26px; top:43px; z-index:4000;}
+.nav_l .tv_list a{ display:block; font-size:12px; color:#666; padding-left:14px; line-height:36px;}
+.nav_l .tv_list a:hover{ background:#ccc;}
+.nav_r li{ float:left; margin-left:16px; font-size:14px;}
+/************************************banner***************************************************************************/
+.banner{ margin:0 auto;}
+.banner #banner_list a{ display:block; height:455px; width:100%; display:none;}
+#banner_list a.active{display:block;}
+.banner .banner_small{ left:160px; top:390px;}
+.banner .banner_small li{ float:left; padding-right:16px; position:relative;}
+.banner .banner_small li i{ background:#000; width:97px; height:55px; display:block; position:absolute; left:0; top:0; opacity:0.6; filter:alpha(opacity=60);}
+.banner .banner_small li i.active{ background:none;}
+.banner .banner_small li b{ width:92px; height:50px; display:block; border:3px solid #46c832; position:absolute; left:0; top:0; display:none;}
+.banner .banner_small .active{ display:block;}
+/***********************************今日热门开始*********************************************************************/
+.hot a:hover{ color:#46c832;}
+.hot_top_l{ margin-top:40px; width:974px;}
+.hot_top_l h2,.hot_top_r h2{ font-size:30px; color:#666;}
+.hot_top_l	a{ color:#666; margin-top:16px; margin-left:20px;}
+.hot_top_r{ margin-top:40px; margin-left:26px;}
+.hot_con_l{ margin-top:20px;  width:974px;}
+.blast{ width:380px; height:282px; border-bottom:1px solid #ccc; background:#fff;}
+.blast .big_bg{ width:380px; height:254px; background:#000; opacity:0.25; filter:aplha(opacity=25); display:block; left:0; top:13px; z-index:200; display:none;}
+.blast .bg{ width:380px; height:22px; display:block; background:#000; opacity:0.6; filter:alpha(opacity=60); left:0; top:245px; color:#fff;}
+.blast p{left:0; top:250px; color:#fff;}
+.blast .blast_py{ width:60px; height:60px; left:160px; top:120px; z-index:220; display:none;}
+.blast .blast_bt{ margin-left:10px; line-height:30px;}
+.blast_right{ width:594px; height:278px;}
+.blast_right li,.hot_con_bt li{ width:180px; height:134px; border-bottom:1px solid #ccc; background:#fff; margin-left:18px; float:left;}
+.blast_right .bg,.hot_con_bt .bg{ left:0; top:80px;}
+.blast_right .bg i,.hot_con_bt .bg i{ width:180px; height:22px; background:#000; opacity:0.6; filter:alpha(opacity=60); position:absolute; left:0; top:0; display:block;}
+.blast_right .bg span,.hot_con_bt .bg span{ position:absolute; left:0; top:0; color:#fff; width:180px; line-height:22px;}
+.blast_right .big_bg,.hot_con_bt .big_bg{ left:0; top:0; display:none;}
+.blast_right .big_bg i,.hot_con_bt .big_bg i{ background:#000; width:180px; height:100px; opacity:0.6; filter:alpha(opacity=60); display:block;}
+.blast_right .big_bg img,.hot_con_bt .big_bg img{ position:absolute; left:50%; top:50%; width:60px; height:60px; margin-left:-30px; margin-top:-30px;}
+.blast_right .blast_right_bt{ margin-left:10px; line-height:24px;}
+.hot_con_bt{ width:990px; background:red; margin-top:318px;}
+.hot_con_bt li{ margin-right:18px; margin-left:0;}
+.jcyk{ width:974px;}
+.jcyk span{ border-top:1px dashed #46c832; width:577px; display:block;}
+.jcyk img{ left:200px; top:-12px; position:absolute;}
+.hot_con_r{ width:240px; height:450px; margin-top:20px; margin-left:26px;}
+.hot_con_r .nc{ width:240px; height:70px; background:#fff; display:block; line-height:70px; margin-top:10px;}
+.hot_con_r .nc img{ margin:5px;}
+.hot_con_r .nc:hover{ background:#46c832; color:#fff;}
+/************************************d电视剧************************************************************/
+.Tv a:hover{ color:#46c832;}
+.Tv{ margin-top:40px;}
+.Tv_l_t h2{ font-size:30px; color:#666;}
+.Tv_l_nav{ margin-left:30px; margin-top:12px;}
+.Tv_l_nav li{ float:left; margin-right:12px;}
+.Tv_l_nav li a{ padding-left:16px;}
+.Tv_con{ width:1000px; height:640px; margin-top:20px;}
+.Tv_con_list{ display:none;}
+.Tv_con_list li{ float:left; width:180px; height:309px; border-bottom:1px solid #ccc; background:#fff; margin-right:20px; position:relative;}
+.Tv_con_list li span{ margin-left:10px; margin-top:8px; display:block; line-height:24px;}
+.Tv_con_list li b{ color:#999;}
+.Tv_con_list li i{ display:block; width:100%; height:100%;background:#000; opacity:0.6; filter:alpha(opacity=60); position:absolute; left:0; top:0;}
+.Tv_con_list li .shadow{ display:none;}
+.Tv_con_list li .con{ position:absolute; left:50px; top:100px; color:#fff; font-size:30px;}
+.Tv_r_t h2{ font-size:24px; color:#000;}
+.Tv_r_list{ margin-top:26px; font-size:14px;}
+.Tv_r_list li{ width:240px; line-height:34px;}
+.Tv_r_list li div{ display:none;}
+.Tv_r_list li.active div{ display:block;}
+.Tv_r_list li.active p{ display:none;}
+.screen{ margin-top:28px;}
+.screen h2{ font-size:24px; color:#000}
+.screen .screen_list{ width:240px; height:134px; background:#fff; margin-top:26px;}
+.screen .screen_list li{ margin-left:10px; line-height:34px;}
+/**************************电影预告*******************************************/
+.Trailer{ margin-top:40px;}
+.Trailer a:hover{ color:#46c832;}
+.Trailer_l h2,.Trailer_r h2{ font-size:30px; color:#000; margin-bottom:20px;}
+.Trailer_list{ }
+.Trailer_list li{ width:180px; height:134px; border-bottom:1px solid #ccc; background:#fff; float:left; margin-right:20px;}
+/*.Trailer_list li:hover{border-bottom:1px solid #46c832;}*/
+.Trailer_list li p{ text-align:center; line-height:24px;}
+.Trailer_list li.active{ border-bottom:1px solid #46c832; box-shadow:0 30px 10}
+.Trailer_r{ width:240px;}
+.Trailer_r .suggest{ margin-top:22px; display:block;}
+/**************************广告位*************************************************/
+.ad{ margin-top:40px;}
+/****************************综艺************************************************/
+.Variety{ margin-top:40px;}
+.Variety_l_t h2,.Variety_r h2{ font-size:30px; color:#000; margin-bottom:20px;}
+.Variety_l_list{ margin-top:12px; margin-left:32px;}
+.Variety_l_list li{ float:left; margin-right:12px;}
+.Variety_l_list li a{ padding-left:12px;}
+.Variety_l_con { width:1000px; background:red; height:332px;}
+.Variety_l_con .big{ width:380px; height:332px; background:#fff; position:relative;}
+.Variety_l_con .big .big_bg{ display:block; width:380px; height:254px; background:#000; opacity:0.6; filter:alpha(opacity=60); position:absolute; left:0; top:0;}
+.Variety_l_con .big .big_bg img { position:absolute; left:50%; top:50%; margin-left:-30px; margin-top:-30px;}
+.Variety_l_con .big .big_bt{ margin:10px; line-height:30px;}
+.Variety_l_con li{ width:180px; height:155px; border-bottom:1px solid #ccc; background:#fff; float:left; margin-right:20px; margin-bottom:20px; }
+.Variety_l_con li .bd_none{ border-bottom:none;}
+.Variety_r{ width:240px;}
+.Variety_r_list li{ width:240px; line-height:35px;}
+.Variety_r_list li div{ display:none;}
+.Variety_r_list li.active div{ display:block;}
+.Variety_r_list li.active p{ display:none;}
+
+
+
+
+
+
+
+
+
+
+
+

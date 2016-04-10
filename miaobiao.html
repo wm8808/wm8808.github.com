@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>秒表</title>
+<script>
+function toDou(n){
+	return n<10?'0'+n:''+n	
+}
+window.onload = function (){
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oP = document.getElementById('pause');
+	var t = 0;
+	var timer = null;
+	oBtn.onclick = function (){
+		clearInterval(timer);
+		timer = setInterval(function (){
+			t++;
+			oTxt.value = toDou(parseInt(t/60))+':'+toDou(t%60)
+		},100);	
+	};
+	oP.onclick = function (){
+		clearInterval(timer);	
+	};	
+};
+</script>
+</head>
+
+<body>
+	<input type="text" id="txt" value="00:00" />
+    <input type="button" value="开始" id="btn" />
+    <input type="button" value="暂停" id="pause" />
+</body>
+</html>

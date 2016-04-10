@@ -1,0 +1,66 @@
+<!-- code by  -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>放大镜</title>
+<style>
+	*{ margin:0; padding:0; }
+	#sm,#bg{ width:310px; height:310px; float:left; position:relative; left:0; top:0;}
+	#bg{ margin-left:10px; overflow:hidden; display:none;}
+	#sm .mask{ width:100px; height:100px; background:#000; opacity:0.3; filter:alpha(opacity=30); position:absolute; left:0; top:0; display:none;}
+	#bg img{ position:absolute; left:0; top:0; }
+</style>
+<script src="js/jquery-1.7.2.js"></script>
+<script>
+	$(document).ready(function (){
+		$('#sm').hover(function (){
+			$('#sm .mask').show();
+			$('#bg').show();
+		},function (){
+			$('#sm .mask').hide();
+			$('#bg').hide();
+		});
+		function fnDown(ev){
+			var disX = ev.clientX - $('.mask').offset().left;
+			var disY = ev.clientY - $('.mask').offset().top;
+			function fnMove(ev){
+				var left = ev.clientX - disX;
+				var top = ev.clientY - disY;
+				if(left<0){
+					left = 0;
+				}else if(left>$('#sm').outerWidth() - $('.mask').outerWidth()){
+					left = $('#sm').outerWidth() - $('.mask').outerWidth();
+				}
+				if(top<0){
+					top = 0;
+				}else if(top>$('#sm').outerHeight() - $('.mask').outerHeight()){
+					top = $('#sm').outerHeight() - $('.mask').outerHeight();
+				}
+				$('.mask').css({left:left,top:top})
+				$('#bg img').css({left:-($('#bg img').outerWidth() - $('#bg').outerWidth())*left/($('#sm').outerWidth() - $('#sm .mask').outerWidth())});
+				$('#bg img').css({top:-($('#bg img').outerHeight() - $('#bg').outerHeight())*top/($('#sm').outerHeight() - $('#sm .mask').outerHeight())});
+			}
+			$(document).on('mousemove',fnMove);
+			function fnUp(){
+				$(document).off('mousemove',fnMove);
+				$(document).off('mouseup',fnUp);
+			}
+			$(document).on('mouseup',fnUp);
+		}
+		$('.mask').on('mousedown',fnDown);
+	});
+</script>
+</head>
+<body>
+	<div id="sm">
+		<img src="img2/m1.jpg">
+		<span class="mask"></span>
+	</div>
+	<div id="bg">
+		<img src="img2/b1.jpg">
+	</div>
+</body>
+</html>

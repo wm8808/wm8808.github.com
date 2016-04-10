@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>倒计时</title>
+<style>
+li{ list-style:none;}
+.box{ width:400px; height:62px; position:relative;}
+.left {width:96px; height:66px; float:left;}
+.right{width:96px; height:66px; float:left;}
+.left li,.right li{ width:46px; height:30px; background:#f60; border-radius:2px; float:left; margin-right:2px; margin-bottom:2px;}
+.clear{ clear:both;}
+.box span{ padding-top:40px; float:left; margin-left:26px;}
+.fist{ position:absolute; left:60px; top:-50px; font-size:60px; color:#fff;}
+.secd{ position:absolute; left:235px; top:-50px; font-size:60px; color:#fff;}
+.three{ position:absolute; left:228px; top:-50px; font-size:60px; color:#fff;}
+.four{ position:absolute; left:272px; top:-50px; font-size:60px; color:#fff;}
+#div1{ position:absolute; left:47px; top:10px; color:#fff; font-size:60px;}
+</style>
+<script>
+window.onload = function (){
+	
+	var oBtn = document.getElementById('btn');
+	var oF =document.getElementById('fist');
+	var oSec = document.getElementById('secd');
+	var oDiv = document.getElementById('div');
+	var s = 900;
+	var M = parseInt(s/60);
+	var Sec = s%60;
+	var timer = null;
+	oBtn.onclick = function (){
+		clearInterval(timer);
+		timer = setInterval(function(){
+			if( Sec == '0'){
+			M--;
+			Sec = 60;	
+			}
+			Sec--;
+			if( M==0 && Sec==0){
+				
+				clearInterval(timer);
+			}
+			oF.innerHTML = toDou(M);
+			oSec.innerHTML = toDou(Sec);	
+		},1000);
+		
+	};
+};
+function toDou(n){
+	return 	n<10?'0'+n:''+n;
+}
+</script>
+</head>
+
+<body>
+	<input type="button" value="提交" id="btn" />
+	<div class="box">
+    	<ul class="left">
+        	<li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+        </ul>
+        <div id="div">
+            <p class="fist" id="fist">15</p>
+            <p class="secd" id="secd">00</p>
+        </div>
+        <span>分</span>
+        <ul class="right">
+        	<li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+        </ul>
+        <p class="three" id="three"></p>
+        <p class="four" id="four"></p>
+        <span>秒</span>
+    </div>
+</body>
+</html>

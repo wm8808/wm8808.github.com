@@ -1,0 +1,99 @@
+<!-- code by  -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>拖拽</title>
+<style>
+	*{ margin:0; padding:0; }
+	#box{ width:300px; height:300px; background:#ccc; position:absolute; left:300px; top:100px; }
+	#box .l{ width:20px; height:100%; background:green; position:absolute; left:0; top:0;}
+	#box .t{ width:100%; height:20px; background:green; position:absolute; left:0; top:0;}
+	#box .r{ width:20px; height:100%; background:green; position:absolute; right:0; top:0;}
+	#box .b{ width:100%; height:20px; background:green; position:absolute; left:0; bottom:0;}
+	#box .lt{ width:20px; height:20px; background:red; position:absolute; left:0; top:0; }
+	#box .rt{ width:20px; height:20px; background:red; position:absolute; right:0; top:0; }
+	#box .rb{ width:20px; height:20px; background:red; position:absolute; right:0; bottom:0; }
+	#box .lb{ width:20px; height:20px; background:red; position:absolute; left:0; bottom:0; }
+</style>
+<script>
+	window.onload = function (){
+		var oBox = document.getElementById('box');
+		var aDiv = oBox.children;
+		for( var i = 0; i<aDiv.length; i++){
+			changeSize(aDiv[i]);
+		}
+		drag(oBox);
+		function changeSize(obj){
+			obj.onmousedown = function (ev){
+				var oEvent = ev||event;
+				oEvent.cancelBubble = true;
+				var oldW = oBox.offsetWidth;
+				var oldX = oEvent.clientX;
+				var oldH = oBox.offsetHeight;
+				var oldY = oEvent.clientY;
+				var oldL = oBox.offsetLeft;
+				var oldT = oBox.offsetTop;
+				document.onmousemove = function (ev){
+					var oEvent = ev||event;
+					if(obj.className.indexOf('l')!=-1){
+						oBox.style.width = oldW + oldX - oEvent.clientX +'px';
+						oBox.style.left = oldL - (oldX - oEvent.clientX) + 'px';
+					}
+					if(obj.className.indexOf('t')!=-1){
+						oBox.style.height = oldH + oldY - oEvent.clientY +'px';
+						oBox.style.top = oldT- (oldY - oEvent.clientY) +'px';
+					}
+					if(obj.className.indexOf('r')!=-1){
+						oBox.style.width = oldW + oEvent.clientX - oldX +'px';
+					}
+					if(obj.className.indexOf('b')!=-1){
+						oBox.style.height = oldH + oEvent.clientY - oldY +'px';
+					}
+				};
+				document.onmouseup = function (){
+					document.onmousemove = null;
+					document.onmouseup = null;
+					obj.releaseCapture&&obj.relaseCapture();
+				};
+				obj.setCapture&&obj.setCapture();
+				return false;
+			};
+		}
+		function drag(obj){
+			obj.onmousedown = function (ev){
+				var oEvent = ev||event;
+				var disX = oEvent.clientX - obj.offsetLeft;
+				var disY = oEvent.clientY - obj.offsetTop;
+				document.onmousemove = function (ev){
+					oEvent = ev||event;
+					obj.style.left = oEvent.clientX - disX +'px';
+					obj.style.top = oEvent.clientY - disY +'px';
+				};
+				document.onmouseup = function (){
+					document.onmousemove = null;
+					document.onmouseup = null;
+					obj.releaseCapture&&obj.releaseCapture();
+				};
+				obj.setCapture&&obj.setCapture();
+				return false;
+			};
+		}
+	};
+</script>
+</head>
+<body>
+	<div id="box">
+		<div class="l"></div>
+		<div class="t"></div>
+		<div class="r"></div>
+		<div class="b"></div>
+		<div class="lt"></div>
+		<div class="rt"></div>
+		<div class="rb"></div>
+		<div class="lb"></div>
+	</div>
+</body>
+</html>

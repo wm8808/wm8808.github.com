@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>超酷数码钟表 - 智能社 - www.zhinengshe.com</title>
+<link href="style/zns_style.css" rel="stylesheet" type="text/css" />
+<script src="jquery-1.7.2.js"></script>
+<script>
+        function toDou(n){
+                return n<10? '0'+n : ''+n;
+        }
+       $(document).ready(function (){
+                var week = ['seven','one','two','three','four','five','six'];
+                function tick (){
+                        var oDate = new Date();
+                        var sDate = oDate.getFullYear() + toDou(oDate.getMonth()+1 + toDou(oDate.getDate()));
+                        var sTime = toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+                        $('#year img').each(function (i){
+                                    $('#year .num').eq(i).attr('src','images/'+sDate.charAt(i)+'.png');
+                        });
+                        $('#time img').each(function (i){
+                                $('#time .num').eq(i).attr('src','images/'+sTime.charAt(i)+'.png');
+                        });
+                        $('#time .num2').attr('src','images/'+week[oDate.getDay()]+'.png');
+                }
+                tick();
+                setInterval(tick,1000);
+       });
+</script>
+</head>
+
+<body>
+
+<div id="clock" class="date">
+    <h2><img src="images/title.png" /></h2>
+    <div class="year" id="year">
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img src="images/year.png" alt="year" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img src="images/month.png" alt="month" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img src="images/seven.png" alt="seven" />
+    </div>
+    <div class="time" id="time">
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img src="images/sign.png" alt="sign" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img src="images/sign.png" alt="sign" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="num" src="images/0.png" alt="0" />
+        <img class="pos2" src="images/week.png" alt="week" />
+        <img class="num2" src="images/one.png" alt="one" />
+    </div>
+    <div class="url" title="智能社-超酷时钟"><a href="http://www.zhinengshe.com/" target="_blank"><img src="images/zns.png" alt="智能社" /></a></div>
+</div>
+
+</body>
+</html>

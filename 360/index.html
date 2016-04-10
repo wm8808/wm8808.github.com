@@ -1,0 +1,3366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>360影视</title>
+<link href="css/base.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" />
+<script src="js/index.js"></script>
+<script>
+	window.onload = function (){
+		tab('Tv_con');
+		tab('video_con');
+		videoTab('Tv_l_nav','Tv_con');
+		Tvr('Tv_r_list');
+		tab('video_con');
+		videoTab('video_l_nav','video_con');
+		Tvr('video_r_list');
+		Tvr('Variety_r_list');	
+	};
+</script>
+</head>
+<body>
+	<!----------------top--------------------------------->
+	<div class="top">
+    	<div class="wrapper clearFix">
+        	<div class="top_sl fl">
+            	<h1><a href="javascript:;">360影视</a></h1>
+            </div>
+            <div class="fl ml22 mr24 ad">
+            	<a href="javascript:;">
+                	<img src="images/ad01.jpg" width="146" height="50" alt="" />
+                </a>	
+            </div> 
+            <div class="sch pr fl clearFix">
+                <input class="fl" id="btn" type="text" value="奔跑吧兄弟第三季" onFocus="if(value=='奔跑吧兄弟第三季'){value=''}" onblur="if(value=='') {value='奔跑吧兄弟第三季}" />
+                <img class="fl" src="images/sch.jpg" width="38" height="38" alt="" />
+                <ul class="sch_list pa" id="schlist" style="display:none">
+                    <li>
+                        <span class="green">1</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="green">2</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="green">3</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="gray">4</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="gray">5</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="gray">6</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="gray">7</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="gray">8</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="gray">9</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                    <li>
+                        <span class="gray">10</span>
+                        <a href="javascript:;">奔跑吧兄弟第三季</a>
+                    </li>
+                </ul>
+                <script>
+						var oBtn = document.getElementById('btn');
+						var oSchList = document.getElementById('schlist');
+						var aLi = oSchList.getElementsByTagName('li');
+											
+						oBtn.onclick = function (){
+							oBtn.value = '';
+							if(oSchList.style.display == 'block'){
+							oSchList.style.display = 'none';	
+							}else{
+							oSchList.style.display = 'block';	
+							}
+						};
+						for( var i = 0; i<aLi.length; i++){
+							aLi[i].onmouseover = function (){
+								//for( var i = 0; i<aLi.length; i++){
+									this.style.background = 'gray';	
+								//}	
+							};
+							aLi[i].onmouseout = function (){
+								//for( var i = 0; i<aLi.length; i++){
+									this.style.background = '';	
+								//}	
+							};		
+						}
+                </script>
+            </div>
+            <ul class="top_r fr clearFix">
+            	<li>
+                	<a class="Movies" href="javascript:;">我的影视</a>
+                </li>
+                <li class="pr" id="record">
+                	<a class="Record" href="javascript:;">观看记录</a>
+                    <div class="Record_list pa" id="Record_list">
+                    </div>
+                    <script>
+						var oRecord = document.getElementById('record');
+						var oRecList = document.getElementById('Record_list');
+						var timer = null;
+							oRecord.onmouseover = function (){
+								oRecList.style.display = 'block';
+								clearTimeout(timer);
+							};
+							oRecord.onmouseout= function (){
+								timer = setTimeout(function(){
+									oRecList.style.display = 'none';	
+								},300);
+							};
+						
+					</script>
+                </li>
+                <li>
+                	<a class="app" href="javascript:;">APP下载</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!------------------nav---------------------------------------->
+    <div class="nav">
+    	<div class="wrapper clearFix">
+        	<ul class="nav_l fl clearFix" id="nav_l">
+            	<li>
+                	<a class="active" href="javascript:;">首页</a>
+                </li>
+                <li class="pr" id="tv">
+                	<a href="javascript:;">电视剧</a>
+                    <div class="tv_list pa" id="tv_list">
+                    	<a href="javascript:;">电视剧首页</a>
+                        <a href="javascript:;">电视剧首页</a>
+                        <a href="javascript:;">电视剧首页</a>
+                        <a href="javascript:;">电视剧首页</a>
+                        <a href="javascript:;">电视剧首页</a>
+                        <a href="javascript:;">电视剧首页</a>
+                        <a href="javascript:;">电视剧首页</a>
+                    </div>
+                    <script>
+						var oTv = document.getElementById('tv');
+						var oTvlist = document.getElementById('tv_list');
+							oTv.onmouseover = function (){
+								oTvlist.style.display = 'block';	
+							};
+							oTv.onmouseout = function (){
+								oTvlist.style.display = 'none';	
+							};
+					</script>
+                </li>
+                <li class="pr" id="video">
+                	<a href="javascript:;">电影</a>
+                    <div class="tv_list pa video_list" id="video_list">
+                    	<a href="javascript:;">电影首页</a>
+                        <a href="javascript:;">电影首页</a>
+                        <a href="javascript:;">电影首页</a>
+                        <a href="javascript:;">电影首页</a>
+                        <a href="javascript:;">电影首页</a>
+                        <a href="javascript:;">电影首页</a>
+                        <a href="javascript:;">电影首页</a>
+                    </div>
+                    <script>
+						var oVideo = document.getElementById('video');
+						var oVideolist = document.getElementById('video_list');
+							oVideo.onmouseover = function (){
+								oVideolist.style.display = 'block';	
+							};
+							oVideo.onmouseout = function (){
+								oVideolist.style.display = 'none';	
+							};
+					</script>
+                </li>
+                <li>
+                	<a href="javascript:;">综艺</a>
+                </li>
+                <li>
+                	<a href="javascript:;">动漫</a>
+                </li>
+                <li>
+                	<a href="javascript:;">资讯</a>
+                </li>
+                <li>
+                	<a href="javascript:;">娱乐</a>
+                </li>
+                <li>
+                	<a href="javascript:;">直播</a>
+                </li>
+                <li>
+                	<a href="javascript:;">广场舞</a>
+                </li>
+            </ul>
+            <ul class="nav_r fr">
+            	<li>
+                	<a href="javascript:;">秀场</a>
+                </li>
+                <li>
+                	<a href="javascript:;">体育</a>
+                </li>
+                <li>
+                	<a href="javascript:;">搞笑</a>
+                </li>
+                <li>
+                	<a href="javascript:;">音乐</a>
+                </li>
+                <li>
+                	<a href="javascript:;">游戏</a>
+                </li>
+                <li>
+                	<a href="javascript:;">专题</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!------------------banner----------------------------------------------->
+    <div id="banner" class="banner pr">
+        <div id="banner_list">
+        	<a style="background:url(images/0.jpg) no-repeat top center; display:block;" href="javascript:;"></a>
+            <a style="background:url(images/1.jpg) no-repeat top center;" href="javascript:;"></a>
+            <a style="background:url(images/0.jpg) no-repeat top center;" href="javascript:;"></a>
+            <a style="background:url(images/1.jpg) no-repeat top center;" href="javascript:;"></a>
+            <a style="background:url(images/0.jpg) no-repeat top center;" href="javascript:;"></a>
+            <a style="background:url(images/1.jpg) no-repeat top center;" href="javascript:;"></a>
+            <a style="background:url(images/0.jpg) no-repeat top center;" href="javascript:;"></a>
+            <a style="background:url(images/1.jpg) no-repeat top center;" href="javascript:;"></a>
+            <a style="background:url(images/0.jpg) no-repeat top center;" href="javascript:;"></a>
+        </div>
+        <div class="wrapper">
+        	<ul class="banner_small pa clearFix" id="banner_small">
+            	<li>
+                	<i class="active"></i>
+                    <b class="active"></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner01_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner02_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner01_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner02_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner01_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner02_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner01_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner02_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<i></i>
+                    <b></b>
+                	<a href="javascript:;">
+                    	<img src="images/banner01_small.jpg" width="97" height="55" alt="" />
+                    </a>
+                </li>
+                <script>
+					var oBanner = document.getElementById('banner');
+					var oBtn = document.getElementById('banner_small');
+					var aLi = oBtn.getElementsByTagName('li');
+					var aBg = oBtn.getElementsByTagName('i');
+					var aBd = oBtn.getElementsByTagName('b');
+					var oBannerlist = document.getElementById('banner_list');
+					var oBannerBig =  oBannerlist.getElementsByTagName('a');
+					var timer = null;
+					var iNow = 0;
+						for( var i = 0; i<aLi.length; i++){
+							aLi[i].index = i;
+							aLi[i].onmouseover = function (){
+								iNow = this.index;
+								show();		
+							};	
+						}
+						timer = setInterval(function(){
+							iNow++;	
+							if(iNow == aLi.length){
+								iNow = 0;	
+							}
+							show();
+						},1000);
+						function show(){
+							for( var i = 0; i<aLi.length; i++){
+								aBg[i].style.background = '';
+								aBd[i].style.display = 'none';
+								oBannerBig[i].style.display = '';
+								}
+								aBg[iNow].style.background = 'none';
+								aBd[iNow].style.display = 'block';
+								oBannerBig[iNow].style.display = 'block';	
+						}
+						oBanner.onmouseover = function (){
+							clearInterval(timer);	
+						};
+						oBanner.onmouseout = function (){
+							timer = setInterval(function(){
+							iNow++;	
+							if(iNow == aLi.length){
+								iNow = 0;	
+							}
+							show();
+							},1000);	
+						};
+				</script>
+            </ul>
+        </div>
+    </div>
+    <!---------------------今日热门-------------------------------------->
+    <div class="hot">
+    	<div class="wrapper clearFix pr">
+        	<div class="hot_top fl clearFix">
+            	<div class="hot_top_l fl clearFix">
+                	<h2 class="fl">今日热门</h2>
+                    <a class="fl" href="javascript:;">更多》</a>
+                </div>
+                <div class="hot_top_r fl">
+                	<h2>热门精选</h2>
+                </div>
+            </div>
+            <div class="hot_con_l fl clearFix" id="all">
+            	<div class="blast pr fl">
+                	<a id="blast_bp" class="pr" href="javascript:;">
+                    	<img  src="images/hot01.jpg" width="380" height="254" alt="" />
+                        <b id="big_bg" class="big_bg pa"></b>
+                        <i id="bg" class="bg pa"></i>
+                        <p class="pa">袭击者高喊为了叙利亚</p>
+                        <img id="blast_py" class="blast_py pa" src="images/hover_pl.png" width="60" height="60" alt="" />	
+                   	</a>
+                    
+                    <a class="blast_bt" href="javascript:;">巴黎多地发生枪击爆炸事件 总统看球场地爆炸</a>
+                    <script>
+						var oBlastbp = document.getElementById('blast_bp');
+						var oBigbg = document.getElementById('big_bg');
+						var oBlastpy = document.getElementById('blast_py');
+						oBlastbp.onmouseover = function (){
+							oBigbg.style.display = 'block';
+							oBlastpy.style.display = 'block';	
+						};
+						oBlastbp.onmouseout = function (){
+							oBigbg.style.display = 'none';
+							oBlastpy.style.display = 'none';	
+						};
+					</script>
+                </div>
+                <ul class="blast_right fl clearFix" id="blast_right">
+                	<li class="mb8">
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li class="mb8">
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li class="mb8">
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li>
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li>
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li>
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                </ul>
+                <ul class="hot_con_bt">
+                	<li class="mb8">
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li class="mb8">
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li>
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li>
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                    <li>
+                    	<a class="pr" href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p class="pa bg pr">
+                            	<i></i>
+                                <span>腰间绑炸弹</span>
+                            </p>
+                            <div class="big_bg pa">
+                            	<i></i>
+                                <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                            </div>
+                        </a>
+                        <a class="blast_right_bt" href="javascript:;">歹徒持AK47闯剧院扫射</a>
+                    </li>
+                </ul>
+                <script>
+					var oBr = document.getElementById('blast_right');
+					var aLi1 = oBr.getElementsByTagName('li');
+					var aA = oBr.getElementsByTagName('a');
+					var aAkbg = oBr.getElementsByTagName('div');
+						for( var i = 0; i<aLi1.length; i++){
+							aLi1[i].index = i;
+							aLi1[i].onmouseover = function (){
+								for( var i = 0; i<aLi1.length; i++){
+									aAkbg[i].style.display = 'none';
+								}
+									aAkbg[this.index].style.display = 'block';
+									
+							};
+							aLi1[i].onmouseout = function (){
+								for( var i = 0; i<aLi1.length; i++){
+									aAkbg[i].style.display = '';	
+								}
+									aAkbg[this.index].style.display = '';
+							};		
+						}
+				</script>
+               <!-- <div class="jcyk pr">
+                	<span></span>
+                	<img src="images/jcyk.png" width="90" height="20" alt="" />
+                </div>-->
+            </div>
+            <div class="hot_con_r fl">
+            	<a href="javascript:;">
+                	<img src="images/007.jpg" width="240" height="120" alt="" />
+                </a>
+                <a class="nc" href="javascript:;">
+                    <img src="images/009.jpg">
+                    <span>北上广不相信眼泪</span>
+                </a>
+                <a class="nc mb8" href="javascript:;">
+                    <img src="images/009.jpg">
+                    <span>北上广不相信眼泪</span>
+                </a>
+                <a href="javascript:;">
+                	<img src="images/010.jpg" width="240" height="160" alt="" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-------------------电视剧-------------------------->
+    <div class="Tv">
+    	<div class="wrapper clearFix">
+        	<div class="Tv_l fl">
+            	<div class="Tv_l_t clearFix">
+                	<h2 class="fl">电视剧</h2>
+                    <ul class="Tv_l_nav fl clearFix" id="Tv_l_nav">
+                    	<li>
+                        	<a href="javascript:;">热门</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">最新</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">内地</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">港台</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">韩剧</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">美剧</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">泰剧</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:;">更多》</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Tv_con" id="Tv_con">
+                	<ul class="Tv_con_list clearFix" id="Tv_con_list" style="display:block;">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							//var oTvcon = document.getElementById('Tv_con');
+//							var aUl = oTvcon.getElementsByTagName('ul');
+//							var aLi2 = oTvcon.getElementsByTagName('li');
+//							var aShadow = oTvcon.getElementsByTagName('div');
+//							
+//								for( var i = 0; i<aLi2.length; i++){
+//									aLi2[i].index = i;
+//									aLi2[i].onmouseover = function (){
+//										for( var i = 0; i<aLi2.length; i++){
+//											aShadow[i].style.display = '';	
+//										}
+//											aShadow[this.index].style.display = 'block';		
+//									};
+//									aLi2[i].onmouseout = function (){
+//										for( var i = 0; i<aLi2.length; i++){
+//											aShadow[i].style.display = '';	
+//										}
+//											aShadow[this.index].style.display = 'none';		
+//									};		
+//								}
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+						/*	var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}
+*/							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}
+*/							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <script>
+						//var oTvnav = document.getElementById('Tv_l_nav');
+//						var aTvli = oTvnav.getElementsByTagName('li');
+//						var oTvcon = document.getElementById('Tv_con');
+//						var aTvul = oTvcon.getElementsByTagName('ul');
+//						
+//							for( var i = 0; i<aTvli.length; i++){
+//								aTvli[i].index = i;
+//								aTvli[i].onmouseover = function (){
+//									for( var i = 0; i<aTvli.length; i++){
+//										aTvul[i].style.display = '';	
+//									}
+//										aTvul[this.index].style.display = 'block';	
+//								};
+//								aTvli[i].onmouseout= function (){
+//									for( var i = 0; i<aTvli.length; i++){
+//										aTvul[i].style.display = '';	
+//									}
+//										aTvul[this.index].style.display = 'block';	
+//								};
+//									
+//							}
+					</script>
+                </div>
+            </div>
+            <div class="Tv_r fl">
+            	<div class="Tv_r_t">
+                	<h2>本月最受关注电视剧</h2>
+                </div>
+                <ul class="Tv_r_list" id="Tv_r_list">
+                	<li class="active">
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <script>
+					//var oTrl = document.getElementById('Tv_r_list');
+//					var aTvrli = oTrl.getElementsByTagName('li');
+//					
+//						for( var i = 0; i<aTvrli.length; i++){
+//							if(i%2 == 1){
+//								aTvrli[i].style.background = 'f4f4f4';	
+//							}else{
+//								aTvrli[i].style.background = '#eee';	
+//							}
+//							aTvrli[i].onmouseover = function (){
+//								for( var i = 0; i<aTvrli.length; i++){
+//									aTvrli[i].className = '';		
+//								}
+//								this.className = 'active';	
+//							};
+//								
+//						}
+						
+				</script>
+                <div class="screen">
+                	<h2>电视剧筛选</h2>
+                    <ul class="screen_list">
+                    	<li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                        <li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                        <li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                        <li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------电影-------------------------->
+    <div class="Tv">
+    	<div class="wrapper clearFix">
+        	<div class="Tv_l fl">
+            	<div class="Tv_l_t clearFix">
+                	<h2 class="fl">电影</h2>
+                    <ul class="Tv_l_nav fl clearFix" id="video_l_nav">
+                    	<li>
+                        	<a href="javascript:;">热门</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">最新</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">内地</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">港台</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">韩剧</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">美剧</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">泰剧</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:;">更多》</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Tv_con" id="video_con">
+                	<ul class="Tv_con_list clearFix" id="Tv_con_list" style="display:block;">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							//var oVdcon = document.getElementById('video_con');
+//							var aUl3 = oVdcon.getElementsByTagName('ul');
+//							var aLi3 = oVdcon.getElementsByTagName('li');
+//							var aShadow3 = oVdcon.getElementsByTagName('div');
+//							
+//								for( var i = 0; i<aLi3.length; i++){
+//									aLi3[i].index = i;
+//									aLi3[i].onmouseover = function (){
+//										for( var i = 0; i<aLi3.length; i++){
+//											aShadow3[i].style.display = '';	
+//										}
+//											aShadow3[this.index].style.display = 'block';		
+//									};
+//									aLi3[i].onmouseout = function (){
+//										for( var i = 0; i<aLi2.length; i++){
+//											aShadow3[i].style.display = '';	
+//										}
+//											aShadow3[this.index].style.display = 'none';		
+//									};		
+//								}
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+							/*var oTvcon = document.getElementById('Tv_con');
+							var aUl = oTvcon.getElementsByTagName('ul');
+							var aLi2 = oTvcon.getElementsByTagName('li');
+							var aShadow = oTvcon.getElementsByTagName('div');
+							
+								for( var i = 0; i<aLi2.length; i++){
+									aLi2[i].index = i;
+									aLi2[i].onmouseover = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'block';		
+									};
+									aLi2[i].onmouseout = function (){
+										for( var i = 0; i<aLi2.length; i++){
+											aShadow[i].style.display = '';	
+										}
+											aShadow[this.index].style.display = 'none';		
+									};		
+								}*/
+							
+						</script>
+                    </ul>
+                    <ul class="Tv_con_list clearFix" id="Tv_con_list">
+                    	<li class="mb20">
+                        	<img src="images/0.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li class="mb20">
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/007.jpg" width="180" height="246" alt="" />
+                            <span>
+                                <p>北上广不相信眼泪</p>
+                                <b>虐爱版“奋斗”</b>
+                            </span>
+                            <div class="shadow">
+                                <i></i>
+                                <p class="con">阴影内容<p>
+                            </div>
+                        </li>
+                        <script>
+						//	var oTvcon = document.getElementById('Tv_con');
+//							var aUl = oTvcon.getElementsByTagName('ul');
+//							var aLi2 = oTvcon.getElementsByTagName('li');
+//							var aShadow = oTvcon.getElementsByTagName('div');
+//							
+//								for( var i = 0; i<aLi2.length; i++){
+//									aLi2[i].index = i;
+//									aLi2[i].onmouseover = function (){
+//										for( var i = 0; i<aLi2.length; i++){
+//											aShadow[i].style.display = '';	
+//										}
+//											aShadow[this.index].style.display = 'block';		
+//									};
+//									aLi2[i].onmouseout = function (){
+//										for( var i = 0; i<aLi2.length; i++){
+//											aShadow[i].style.display = '';	
+//										}
+//											aShadow[this.index].style.display = 'none';		
+//									};		
+//								}
+							
+						</script>
+                    </ul>
+                    <script>
+						/*var oTvnav = document.getElementById('video_l_nav');
+						var aVdli = oTvnav.getElementsByTagName('li');
+						var oTvcon = document.getElementById('video_con');
+						var aVdul = oTvcon.getElementsByTagName('ul');
+						
+							for( var i = 0; i<aVdli.length; i++){
+								aVdli[i].index = i;
+								aVdli[i].onmouseover = function (){
+									for( var i = 0; i<aVdli.length; i++){
+										aVdul[i].style.display = '';	
+									}
+										aVdul[this.index].style.display = 'block';	
+								};
+								aVdli[i].onmouseout= function (){
+									for( var i = 0; i<aTvli.length; i++){
+										aVdul[i].style.display = '';	
+									}
+										aVdul[this.index].style.display = 'block';	
+								};
+									
+							}*/
+					</script>
+                </div>
+            </div>
+            <div class="Tv_r fl">
+            	<div class="Tv_r_t">
+                	<h2>本月最受关注电影</h2>
+                </div>
+                <ul class="Tv_r_list" id="video_r_list">
+                	<li class="active">
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<p>大秧歌</p>
+                            <div>
+                            	<img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <script>
+				/*	var oTrl = document.getElementById('video_r_list');
+					var aVdrli = oTrl.getElementsByTagName('li');
+					
+						for( var i = 0; i<aVdrli.length; i++){
+							if(i%2 == 1){
+								aTvrli[i].style.background = 'f4f4f4';	
+							}else{
+								aTvrli[i].style.background = '#eee';	
+							}
+							aVdrli[i].onmouseover = function (){
+								for( var i = 0; i<aVdrli.length; i++){
+									aVdrli[i].className = '';		
+								}
+								this.className = 'active';	
+							};
+								
+						}*/
+						
+				</script>
+                <div class="screen">
+                	<h2>电影筛选</h2>
+                    <ul class="screen_list">
+                    	<li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                        <li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                        <li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                        <li>
+                        	<span>类型：</span>
+                            <span>
+                            	<a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                                <a href="javascript:;">军事</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------电影预告---------------------------->
+    <div class="Trailer">
+    	<div class="wrapper clearFix">
+        	<div class="Trailer_l fl">
+            	<h2>电影·预告</h2>
+                <ul class="Trailer_list clearFix" id="Trailer_list">
+                    <li>
+                    	<a href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p>AK47</p>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p>AK47</p>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p>AK47</p>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p>AK47</p>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript:;">
+                        	<img src="images/ak7.jpg" width="180" height="100" alt="" />
+                            <p>AK47</p>
+                        </a>
+                    </li>
+                    <script>
+						var oTrailerlist = document.getElementById('Trailer_list');
+						var aTli = oTrailerlist.getElementsByTagName('li');
+						
+							for( var i = 0; i<aTli.length; i++){
+								aTli[i].onmouseover = function (){
+									for( var i = 0; i<aTli.length; i++){
+										aTli[i].style.borderBottom = '';	
+									}
+										this.style.borderBottom = '1px solid #46c832';
+										this.style.boxShadow = '0 1px 2px';	
+								};
+								aTli[i].onmouseout = function (){
+									for( var i = 0; i<aTli.length; i++){
+										aTli[i].style.borderBottom = '';	
+									}
+										this.style.borderBottom = '';
+										this.style.boxShadow = '';	
+								};	
+							}
+					</script>
+                </ul>
+            </div>
+            <div class="Trailer_r fl">
+            	<h2>电影·专题</h2>
+                <a href="javascript:;">
+                	<img src="images/011.jpg" width="240" height="98" alt="" />
+                </a>
+                <a class="suggest" href="javascript:;">亿万票房女王白百合的上位史</a>
+            </div>
+        </div>
+    </div>
+    <!-------------------广告位1------------------------------------->
+    <div class="ad">
+    	<div class="wrapper clearFix">
+        	<img src="images/0.jpg" width="610" height="100" alt="" />
+            <img class="ml16" src="images/0.jpg" width="610" height="100" alt="" />
+        </div>
+    </div>
+    <!--------------------综艺----------------------------------------->
+    <div class="Variety">
+    	<div class="wrapper clearFix">
+        	<div class="Variety_l fl">
+            	<div class="Variety_l_t clearFix">
+                	<h2 class="fl">综艺</h2>
+                    <ul class="Variety_l_list fl clearFix" id="Variety_l_list">
+                    	<li>
+                        	<a href="javascript:;">热门</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">选秀</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">情感</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">访谈</a>
+                        </li>
+                        <li>
+                        	|<a href="javascript:;">更多》</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="Variety_l_con">
+                	<li class="big">
+                        <img src="images/hot01.jpg" width="380" height="254" alt="" />
+                        <div class="big_bg">
+                        	<i></i>
+                            <img src="images/hover_pl.png" width="60" height="60" alt="" />
+                        </div>
+                        <div class="big_bt">
+                            <a href="javascript:;">奔跑吧兄弟 第三季</a>
+                            <p>跑男团不撕名牌比才艺 “好声音现场”开演唱会</p>
+                        </div>
+                        <script>
+							
+						</script>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li class="bd_none">
+                    </li>
+                    <li class="bd_none">
+                    </li>
+                    <li class="bd_none">
+                    </li>
+                </ul>
+            </div>
+            <div class="Variety_r fl">
+            	<h2>人气综艺榜</h2>
+                <ul class="Variety_r_list" id="Variety_r_list">
+                	<li class="active">
+                    	<a href="javascript::">
+                            <p>人气综艺榜</p>
+                            <div>
+                                <img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript::">
+                            <p>人气综艺榜</p>
+                            <div>
+                                <img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript::">
+                            <p>人气综艺榜</p>
+                            <div>
+                                <img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript::">
+                            <p>人气综艺榜</p>
+                            <div>
+                                <img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript::">
+                            <p>人气综艺榜</p>
+                            <div>
+                                <img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript::">
+                            <p>人气综艺榜</p>
+                            <div>
+                                <img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="javascript::">
+                            <p>人气综艺榜</p>
+                            <div>
+                                <img src="images/011.jpg" width="240" height="120" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
