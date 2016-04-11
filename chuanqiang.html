@@ -1,0 +1,156 @@
+<!-- code by  -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>穿墙</title>
+<style>
+	*{ margin:0; padding:0; list-style:none; }
+	ul{ width:660px; }
+	li{ width:200px; height:200px; background:#ccc; position:relative; left:300px; top:100px; overflow:hidden; float:left; margin:5px;}
+	li span{ width:100%; height:100%; background:red; opacity:0.3; filter:alpha(opacity=30); position:absolute; left:-200px; top:0;}
+</style>
+<script>
+	function getByStyle(obj,sName){
+		return (obj.currentStyle||getComputedStyle(obj,false))[sName];
+	}
+	function move(obj,json,options){
+		options = options||{};
+		options.duration = options.duration||500;
+		options.easing = options.easing||'linear';
+		var start = {};
+		var dis = {};
+		for( var name in json){
+			start[name] = parseFloat(getByStyle(obj,name));
+			if(name){
+				switch(isNaN(start[name])){
+					case 'width':
+						start[name] = obj.offsetWidth;
+					break;
+					case 'height':
+						start[name] = obj.offsetHeight;
+					break;
+					case 'left':
+						start[name] = obj.offsetLeft;
+					break;
+					case 'top':
+						start[name] = obj.offsetTop;
+					break;
+					case 'opacity':
+						start[name] = 1;
+					break;
+					case 'borderwidth':
+						start[name] = 0;
+					break;
+				}
+			}
+			dis[name] = json[name] - start[name];
+		}
+		var count = Math.floor(options.duration/16);
+		var n = 0;
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function (){
+			n++;
+			for( var name in json){
+				switch(options.easing){
+					case 'linear':
+						var cur = start[name] + dis[name]*n/count;
+					break;
+					case 'ease-in':
+						var a = n/count;
+						var cur = start[name] + dis[name]*Math.pow(a,3)
+					break;
+					case 'ease-out':
+						var a = 1 - n.count;
+						var cur = start[name] + dis[name]*(1-Math.pow(a,3));
+					break;
+				}
+				if( name == 'opacity'){
+					obj.style[name] = cur;
+					obj.style.filter = 'alpha(opacity='+cur*100+')';
+				}else{
+					obj.style[name] = cur +'px';
+				}
+			}
+			if(count == n){
+				clearInterval(obj.timer);
+				options.complete&&options.cpmplete();
+			}
+		},16);
+	}
+	function getDir(obj,ev){
+		var x = obj.offsetLeft + obj.offsetWidth/2 - ev.clientX;
+		var y = obj.offsetTop + obj.offsetHeight/2 - ev.clientY;
+		return Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;
+	}
+	function cross(obj){
+		obj.onmouseover = function (ev){
+			var oS = this.children[0];
+			var oEvent = ev||event;
+			var oFrom = oEvent.fromElement||oEvent.relatedTarget;
+			if(this.contains(oFrom))return;
+			var dir = getDir(this,oEvent);
+			console.log(dir);
+			switch(dir){
+				case 0:
+					oS.style.left = '200px';
+					oS.style.top = 0;
+				break;
+				case 1:
+					oS.style.left = 0;
+					oS.style.top = '200px';
+				break;
+				case 2:
+					oS.style.left = '-200px';
+					oS.style.top = 0;
+				break;
+				case 3:
+					oS.style.left = 0;
+					oS.style.top = '-200px';
+				break;
+			}
+			move(oS,{left:0,top:0},{duration:300});
+		};
+		obj.onmouseout = function (ev){
+			var oS = this.children[0];
+			var oEvent = ev||event;
+			var oTo = oEvent.toElement||oEvent.relatedTarget;
+			if(this.contains(oTo))return;
+			var dir = getDir(this,oEvent);
+			switch(dir){
+				case 0:
+					move(oS,{left:200,top:0},{duration:300});
+				break;
+				case 1:
+					move(oS,{left:0,top:200},{duration:300});
+				break;
+				case 2:
+					move(oS,{left:-200,top:0},{duration:300});
+				break;
+				case 3:
+					move(oS,{left:0,top:-200},{duration:300});
+				break;
+			}
+		};
+	}
+	window.onload = function (){
+		var aLi = document.getElementsByTagName('li');
+		for( var i = 0; i<aLi.length; i++){
+			cross(aLi[i]);
+		}
+	};
+</script>
+</head>
+<body>
+	<ul>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+	</ul>
+</body>
+</html>
