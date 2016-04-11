@@ -63,54 +63,58 @@ window.onload = function (){
 			});	
 		};	
 	})();*/
-	/*;(function (){
-		var oCon = document.getElementById('con');
-		var aCon = oCon.children;
-		var aImg = oCon.getElementsByTagName('img');
-		var aP = oCon.getElementsByTagName('p');
-		for( var i = 0; i<aCon.length; i++){
-			aCon[i].index = i;
-			aCon[i].onmouseover = function (){
-				for( var i = 0; i<aCon.length; i++){
-					aCon[i].className = '';
-					aImg[i].style.width = '240px';
-					aImg[i].style.height = '135px';
+	;(function (){
+		var oCenter = document.getElementById('center');
+		//var oCon = document.getElementById('con');
+		var aLi = oCenter.getElementsByTagName('li');
+		var aImg = oCenter.getElementsByTagName('img');
+		for( var i = 0; i<aLi.length; i++){
+			aLi[i].index = i;
+			aLi[i].onmouseover = function (){
+				for( var i = 0; i<aLi.length; i++){
+					aLi[i].className = '';
+					aImg[i].style.width = aImg[i].offsetWidth+'px';
+					aImg[i].style.height = aImg[i].offsetHeight+'px';
 					//aP[i].style.marginTop = '20px';
 				}
 				this.className = 'show';
-				aImg[this.index].style.width = '250px';
-				aImg[this.index].style.height = '145px';
+				aImg[this.index].style.transform = 'scale(1.1)';
+				//aImg[this.index].style.height = '145px';
 				//aP[this.index].style.marginTop = '21px';
 			};
-			aCon[i].onmouseout = function (){
+			aLi[i].onmouseout = function (){
 				this.className = '';
-				for( var i = 0; i<aCon.length; i++){
-					aImg[i].style.width = '240px';
-					aImg[i].style.height = '135px';	
+				for( var i = 0; i<aLi.length; i++){
+					aImg[this.index].style.transform = 'scale(1)';
 				}
 			};
 		}
 				
-	})();*/
+	})();
 	;(function (){
-		var oCon = document.getElementById('con');
-		var aLi = oCon.children;
+		var oCenter = document.getElementById('center');
+		var aCon = oCenter.children;
 		var oPrev = document.getElementById('prev');
 		var oNext = document.getElementById('next');
 		var Num = 0;
 		oNext.onclick = function (){
 			Num++;
-			if(Num > 1){
-				Num = 1;	
+			if(Num == aCon.length){
+				Num = aCon.length - 1;	
 			}
-			move(oCon,{top:-452*Num},{duration:1000});	
+			for( var i = 0; i<aCon.length; i++){
+				move(aCon[i],{top:-aCon[0].offsetHeight*Num},{duration:1000});	
+			}
+				
 		};
 		oPrev.onclick = function (){
 			Num--;
-			if(Num == -1){
-				Num = 0;
+			if(Num < 0){
+				Num = 0;	
 			}
-			move(oCon,{top:452*Num},{duration:1000});	
+			for( var i = 0; i<aCon.length; i++){
+				move(aCon[i],{top:-aCon[0].offsetHeight*Num},{duration:1000});	
+			}	
 		};			
 	})();
 	////翻页
