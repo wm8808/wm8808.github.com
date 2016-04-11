@@ -1,0 +1,68 @@
+<!-- code by  -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>回放</title>
+<style>
+	*{ margin:0; padding:0; }
+	#div1{ width:100px; height:100px; background:red; position:absolute; right:0; top:0; }
+</style>
+<script>
+	window.onload=function(){ 
+		var oDiv=document.getElementById('div1'); 
+		var oBtn=document.getElementById('btn'); 
+		var disX=disY=0; 
+		var dragIf=false; 
+		var position=[{x:oDiv.offsetLeft,y:oDiv.offsetTop}];//这个是实现记录和回放的关键，其它都是基本元素的获取 
+ 
+		oDiv.onmousedown=function(ev){ 
+			var oEvent=ev||event; 
+			disX=oEvent.clientX-oDiv.offsetLeft;//鼠标相对于div边框的距离 
+			disY=oEvent.clientY-oDiv.offsetTop; 
+			dragIf=true;//可以进行拖拽的标志 
+ 
+			position.push({x:oDiv.offsetLeft,y:oDiv.offsetTop});//记录从这时候就开始了 
+			return false; 
+		}; 
+		document.onmousemove=function(ev){ 
+			if(!dragIf)return;//这个判断极为重要，只有按下的移动才有效 
+			var oEvent=ev||event; 
+			var nowX=oEvent.clientX-disX;//根据上面记录的鼠标相对div的距离就知道div相对网页的距离了吧 
+			var nowY=oEvent.clientY-disY; 
+			var maxX=document.documentElement.clientWidth-oDiv.offsetWidth;//这里是offsetWidth，是div的宽度，不是offsetLeft 
+			var maxY=document.documentElement.clientHeight-oDiv.offsetHeight; 
+			nowX=nowX<0?0:nowX;//这些判定，只是判断不要出了边界 
+			nowY=nowY<0?0:nowY; 
+			nowX=nowX>maxX?maxX:nowX; 
+			nowY=nowY>maxY?maxY:nowY; 
+		 
+			oDiv.style.marginTop=oDiv.style.marginLeft=0; 
+			oDiv.style.left=nowX+"px";//不要忘记+“px”，只有style.left/top是有“px”的 
+			oDiv.style.top=nowY+"px"; 
+			position.push({x:nowX,y:nowY});//不停记录啊 
+			oDiv.innerHTML="X:"+nowX+"Y:"+nowY;//直观的看到变化 
+			return false; 
+		}; 
+		document.onmouseup=function(){ 
+			dragIf=false;//不允许再进行拖拽和记录了 
+			oDiv.innerHTML="X:"+oDiv.offsetLeft+"Y:"+oDiv.offsetTop; 
+			}; 
+			oBtn.onclick = function (){ 
+			if (position.length == 1) return;//只有一个的时候，说明并未移动 
+			var timer = setInterval(function (){ 
+			var oPos = position.pop(); 
+			oPos ? (oDiv.style.left = oPos.x + "px", oDiv.style.top = oPos.y + "px") : clearInterval(timer);//又被这个写法惊艳到 
+			}, 30); 
+			return false; 
+			}; 
+		};
+</script>
+</head>
+<body>
+	<input type="button" value="回放" id="btn" />
+	<div id="div1"></div>
+</body>
+</html>
