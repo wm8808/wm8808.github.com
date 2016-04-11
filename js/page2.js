@@ -63,7 +63,7 @@ window.onload = function (){
 			});	
 		};	
 	})();*/
-	;(function (){
+	/*;(function (){
 		var oCon = document.getElementById('con');
 		var aCon = oCon.children;
 		var aImg = oCon.getElementsByTagName('img');
@@ -91,7 +91,7 @@ window.onload = function (){
 			};
 		}
 				
-	})();
+	})();*/
 	;(function (){
 		var oCon = document.getElementById('con');
 		var aLi = oCon.children;
