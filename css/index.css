@@ -140,6 +140,7 @@ transition:1s all ease; font-size:26px; color:#fff;}
 	.center .con li:nth-of-type(4n){ margin-right:0;}
 	.center .con li:nth-of-type(8n){ margin-right:0;}
 	.center .con li p{ margin-top:40px;}
+	.center .con li:hover{ box-shadow:0px 2px 10px #000;}
 	.center .con li:hover img{ width:92%;}
 	.center .page { min-width:200px; position:absolute; right:2%; bottom:6px; height:20px; margin-top:10px;}
 }
