@@ -1,0 +1,60 @@
+<!-- code by  -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>模拟留言板</title>
+<link href="css/zns_style.css" rel="stylesheet" type="text/css" />
+<style>
+</style>
+<script>
+	window.onload = function (){
+		//获取元素
+		var oParent = document.getElementById('parent');
+		var oBox = document.getElementById('box');
+		var oTxt = document.getElementById('text');
+		var oBtn = document.getElementById('btn');
+		var cout = 0;
+		//添加事件
+		oBtn.onclick = function (){
+			//创建插入元素
+			cout++;
+			if(oTxt.value == ''){
+				return;
+			}
+			if(oBox.innerHTML == '<em>这里会显示留言内容……</em>'){
+				oBox.innerHTML = '';
+			}
+			var oP= document.createElement('p');
+			oBox.appendChild(oP);
+			oP.innerHTML = cout+'.'+oTxt.value;
+			var oSpan = document.createElement('span');
+			oP.appendChild(oSpan);
+			oP.onmouseover = function (){
+				oSpan.innerHTML = '你确定要删除'+oP.innerHTML+'吗？';
+			};
+			oP.onmouseout = function (){
+				oSpan.innerHTML = '';
+			};
+			oP.onclick = function (){
+				oBox.removeChild(oP);
+				if(oBox.innerHTML == ''){
+					oBox.innerHTML = '<em>这里会显示留言内容……</em>';	
+				}
+			};
+			oTxt.value = '';
+		};
+	};
+</script>
+</head>
+<body>
+	<div id="parent">
+		<h4>留言内容：</h4>
+		<div id="box"><em>这里会显示留言内容……</em></div>
+		<textarea id="text"></textarea><br />
+		<input id="btn" type="button"  value="发表留言" />
+</div>
+</body>
+</html>
