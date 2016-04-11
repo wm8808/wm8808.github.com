@@ -1,0 +1,61 @@
+<!-- code by  -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<title>放大镜</title>
+<style>
+	*{ margin:0; padding:0; }
+	#div1,#div2{ position:relative; width:310px; height:310px; float:left; }
+	.mask{ width:100px; height:100px; background:#000; opacity:0.5; filter:alpha(opacity=50); position:absolute; left:0; top:0; display:none;}
+	#div2{ width:300px; height:300px; overflow:hidden; margin-left:10px; display:none;}
+	#div2 img{ position:absolute; left:0; top:0; }
+</style>
+<script>
+	window.onload = function (){
+		var oDiv1 = document.getElementById('div1');
+		var oDiv2 = document.getElementById('div2');
+		var oMask = oDiv1.children[0];
+		var oImg = oDiv2.children[0];
+		oDiv1.onmouseover = function (){
+			oDiv2.style.display = 'block';
+			oMask.style.display = 'block';
+		};
+		oDiv1.onmouseout = function (){
+			oDiv2.style.display = 'none';
+			oMask.style.display = 'none';
+		};
+		oDiv1.onmousemove = function (ev){
+			var oEvent = ev||event;
+			var left = oEvent.clientX - oMask.offsetWidth/2;
+			var top = oEvent.clientY - oMask.offsetHeight/2;
+			if(left<0){
+				left = 0;
+			}else if(left>oDiv1.offsetWidth - oMask.offsetWidth){
+				left = oDiv1.offsetWidth - oMask.offsetWidth;
+			}
+			if(top<0){
+				top = 0;
+			}else if(top>oDiv1.offsetHeight - oMask.offsetHeight){
+				top = oDiv1.offsetHeight - oMask.offsetHeight;
+			}
+			oMask.style.left = left+'px';
+			oMask.style.top = top+'px';
+			oImg.style.left = -(oImg.offsetWidth - oDiv2.offsetWidth)*left/(oDiv1.offsetWidth - oMask.offsetWidth)+'px';
+			oImg.style.top = -(oImg.offsetHeight - oDiv.offsetHeight)*top/(oDiv1.offsetHeight - oMask.offsetHeight)+'px';
+		};
+	};
+</script>
+</head>
+<body>
+	<div id="div1">
+		<div class="mask"></div>
+		<img src="img2/m1.jpg">
+	</div>
+	<div id="div2">
+		<img src="img2/b1.jpg">
+	</div>
+</body>
+</html>

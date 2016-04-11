@@ -131,7 +131,7 @@ transition:1s all ease; font-size:26px; color:#fff;}
 @media screen and (min-width:1367px){
 	.section3 .center{ position:relative; width:100%; height:655px; margin:5% auto 0; text-align:center;}
 	.center .con{ width:1600px; margin:0 auto; text-align:center;}
-	.center .con li{ float:left; width:350px; height:245px; margin-right:37px; margin-top:20px; padding-top:18px;}
+	.center .con li{ float:left; width:350px; height:275px; margin-right:37px; margin-top:20px; padding-top:18px;}
 	.center .con li img{ width:90%; -webkit-transition:0.5s all ease;
 									-moz-transition:0.5s all ease;
 									-ms-transition:0.5s all ease;
